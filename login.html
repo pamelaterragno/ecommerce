@@ -18,11 +18,30 @@
 
 <body>
   <main class="mt-5">
-    <div class="container">
+
+<div class="loginContainer">
+  <form id="formid" method="post" action="index.html">
+    <div class="containerEmail">
+      <label for="email" class="formlabel">Email</label>
+      <input type="email" class="inputemail" id="email-input" required placeholder="Enter email">
+    </div>
+<br>
+    <div class="containerPassword">
+      <label for="password" class="formlabel">Password</label>
+      <input type="password" class="inputpassword" id="password-input" required placeholder="Enter password">
+    </div>
+<br>
+<div class="button">
+  <button id="buttomSubmit" type="submit" id="loginButton">Ingresar</button>
+</div>
+  </form>
+</div>
+
+    <!--<div class="container">
       <div class="alert alert-danger text-center" role="alert">
         <h4 class="alert-heading">Funcionalidad en desarrollo</h4>
       </div>
-    </div>
+    </div>-->
   </main>
   <footer class="text-muted">
     <div class="container">

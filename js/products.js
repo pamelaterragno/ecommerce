@@ -13,6 +13,9 @@ fetch (URL_CAT_AUTOS)
     //function that itirate the array of products
         walk(json.products);
     })
+//TO DO: SHOW AND HIDE SPINNER IN FETCH FUNCTION
+
+
 
 //function that iritate the array and add the elements to CONTAINER
     function walk(array){

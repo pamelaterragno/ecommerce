@@ -14,10 +14,10 @@ fetch (URL_CAT_AUTOS)
         walk(json.products);
     })
 
-//function that runs the array
+//function that iritate the array and add the elements to CONTAINER
     function walk(array){
         for (let i of array) {
-            //links of categories but with my variable
+            //links of categories.js but with my variable i
          CONTAINER.innerHTML+=`
              <div onclick="setCatID(${i.id})" class="list-group-item list-group-item-action cursor-active">
                     <div class="row">

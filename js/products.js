@@ -14,6 +14,7 @@ fetch (URL_CAT_AUTOS)
         walk(json.products);
     })
 //TO DO: SHOW AND HIDE SPINNER IN FETCH FUNCTION
+//THIS NEEDS TO BE A GENERIC FUNCTION
 
 
 

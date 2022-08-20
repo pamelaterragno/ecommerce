@@ -2,7 +2,7 @@
 const URL_CAT_AUTOS = "https://japceibal.github.io/emercado-api/cats_products/101.json";
 const CONTAINER = document.getElementById("showProducts");
 
-//fetch to show in console
+//fetch
 fetch (URL_CAT_AUTOS)
     .then(function(resp) {
         return resp.json();

@@ -1,14 +1,8 @@
-document.addEventListener("DOMContentLoaded", function(){
-    document.getElementById("autos").addEventListener("click", function() {
-        localStorage.setItem("catID", 101);
-        window.location = "products.html"
-    });
-    document.getElementById("juguetes").addEventListener("click", function() {
-        localStorage.setItem("catID", 102);
-        window.location = "products.html"
-    });
-    document.getElementById("muebles").addEventListener("click", function() {
-        localStorage.setItem("catID", 103);
-        window.location = "products.html"
-    });
+
+const BUTTON = document.getElementById("buttomSubmit");
+
+BUTTON.addEventListener("submit", function(){
+    window.location = "main.html"
 });
+
+//this file is named index for an exception, this should be called login

@@ -15,7 +15,6 @@ fetch (JSON_PRODUCTS)
         walk(json.products);
     })
 //TO DO: SHOW AND HIDE SPINNER IN FETCH FUNCTION
-//THIS NEEDS TO BE A GENERIC FUNCTION
 
 
 

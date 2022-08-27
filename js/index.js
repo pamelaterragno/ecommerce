@@ -1,7 +1,7 @@
 
 const BUTTON = document.getElementById("buttomSubmit");
-var mail_user = getElementById("email-input").val();
-var pass_user = getElementById("password-input").val();
+var mail_user = document.getElementById("email-input").val();
+var pass_user = document.getElementById("password-input").val();
 
 
 BUTTON.addEventListener("submit", function(){

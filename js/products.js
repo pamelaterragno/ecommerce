@@ -1,5 +1,6 @@
 // url to obtain array in json
 const URL_CAT_AUTOS = "https://japceibal.github.io/emercado-api/cats_products/101.json";
+//const JSON_PRODUCTS = PRODUCTS_URL +localStorage("catID")+ EXT_TYPE;
 const CONTAINER = document.getElementById("showProducts");
 
 //fetch

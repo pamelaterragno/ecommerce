@@ -8,6 +8,9 @@ BUTTON.addEventListener("submit", (evt)=> {
  if (mail_user.value && pass_user.value) {
  localStorage.setItem("mail", mail_user.value) &&
  localStorage.setItem("password", pass_user.value);}
+ else {
+  localStorage.removeItem("mail") && localStorage.removeItem("password");
+ }
       //redirect to main
       window.location = "main.html";
 });

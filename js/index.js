@@ -7,8 +7,6 @@ BUTTON.addEventListener("submit", function() {
       //save value inputs in local storage
     localStorage.setItem("mail", mail_user);
     localStorage.setItem("password", pass_user);
-      //redirect to main
-      window.location = "main.html";
 });
 
 //this file is named index for an exception, this should be called login

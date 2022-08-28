@@ -3,7 +3,7 @@ const BUTTON = document.getElementById("buttomSubmit");
 var mail_user = document.getElementById("email-input");
 var pass_user = document.getElementById("password-input");
 
-BUTTON.addEventListener("submit", function() {
+BUTTON.addEventListener("submit", (evt)=> {
    //save value inputs in local storage
  if (mail_user.value && pass_user.value) 
  localStorage.setItem("mail", mail_user.value) &&

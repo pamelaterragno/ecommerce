@@ -4,11 +4,11 @@ var mail_user = document.getElementById("email-input");
 var pass_user = document.getElementById("password-input");
 
  //save value inputs in local storage
-
+localStorage.setItem("mail", mail_user.value);
+localStorage.setItem("password", pass_user.value);
+console.log(localStorage);
 
 BUTTON.addEventListener("submit", function(){
-    localStorage.setItem("mail", mail_user.value);
-    localStorage.setItem("password", pass_user.value);
     window.location = "main.html"
     
 });

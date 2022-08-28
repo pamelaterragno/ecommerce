@@ -1,7 +1,7 @@
 
 const BUTTON = document.getElementById("buttomSubmit");
-var mail_user = document.getElementById("email-input").value;
-var pass_user = document.getElementById("password-input").value;
+var mail_user = document.getElementById("email-input").value();
+var pass_user = document.getElementById("password-input").value();
 
  //save value inputs in local storage
  localStorage.setItem("mail", mail_user);

@@ -3,7 +3,7 @@ const BUTTON = document.getElementById("buttomSubmit");
 var mail_user = document.getElementById("email-input").value;
 var pass_user = document.getElementById("password-input").value;
 
-BUTTON.addEventListener("submit", function(){
+BUTTON.addEventListener("click", function(){
       //save value inputs in local storage
     localStorage.setItem("mail", mail_user);
     localStorage.setItem("password", pass_user);
@@ -12,6 +12,5 @@ BUTTON.addEventListener("submit", function(){
 });
 
 
-console.log(localStorage.getItem("mail"));
 //this file is named index for an exception, this should be called login
 

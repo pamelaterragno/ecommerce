@@ -190,5 +190,6 @@ a.custom-card:hover {
 }
 
 .price {
-  font-size: 30px;
+  font-size: 15px;
+  font-style: italic;
 }

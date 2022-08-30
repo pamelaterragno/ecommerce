@@ -5,7 +5,6 @@ var pass_user = document.getElementById("password-input");
 
 BUTTON.addEventListener("click", function() {
    //save value inputs in local storage
-   preventDefault()
 localStorage.setItem("mail", mail_user.value) 
 localStorage.setItem("password", pass_user.value);
 

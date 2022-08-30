@@ -34,7 +34,7 @@ fetch (JSON_PRODUCTS)
                         <small class="text-muted">${i.soldCount} artículos</small>
                     </div>
                     <p class="mb-1">${i.description}</p>
-                    <h1 class="mb-1">${i.cost}${i.currency}</h1>
+                    <h1>${i.cost}${i.currency}</h1>
                 </div>
             </div>
         </div>

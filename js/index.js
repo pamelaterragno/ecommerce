@@ -19,5 +19,5 @@ BUTTON.addEventListener("click", function() {
 
 
 function inputRequired() {
-    mail_user.value.length > 0 && pass_user.value.length > 0;
+    mail_user.value.required === true && pass_user.value.required === true;
  } 

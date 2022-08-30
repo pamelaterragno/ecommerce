@@ -188,3 +188,7 @@ a.custom-card:hover {
 .checked {
   color: orange;
 }
+
+.price {
+  font-size: 30px;
+}

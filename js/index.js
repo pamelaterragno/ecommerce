@@ -1,15 +1,18 @@
 
 const BUTTON = document.getElementById("buttomSubmit");
-var mail_user = document.getElementById("email-input");
-var pass_user = document.getElementById("password-input");
+var mail_user = document.getElementById("email-input").value;
+var pass_user = document.getElementById("password-input").value;
 
-BUTTON.addEventListener("click", function() {
+BUTTON.addEventListener("click", (e) => { 
    //save value inputs in local storage
-localStorage.setItem("mail", mail_user.value) 
-localStorage.setItem("password", pass_user.value);
+   e.preventDefault()
 
       //redirect to main
-      window.location = "main.html";
-});
+     if (mail_user && pass_user) { 
+            localStorage.setItem("mail", mail_user) 
+            localStorage.setItem("password", pass_user);
+     window.location = "main.html";
+
+}});
 
 //this file is named index for an exception, this should be called login

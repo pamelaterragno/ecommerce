@@ -193,3 +193,11 @@ a.custom-card:hover {
   font-size: 15px;
   font-style: italic;
 }
+
+
+.loginContainer {
+  align-self: center;
+  background-color: #0087F7;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 30px;
+}

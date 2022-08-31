@@ -200,4 +200,5 @@ a.custom-card:hover {
   background-color: #0087F7;
   padding-top: 30px;
   padding-bottom: 30px;
+  display: flex;
 }

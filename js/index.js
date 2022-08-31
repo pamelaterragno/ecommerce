@@ -11,7 +11,7 @@ BUTTON.addEventListener("click", function() {
 //redirect to main
             window.location = "main.html"; 
       } else {
-            throw Error
+            //SHOW ERROR
       }
 });
 

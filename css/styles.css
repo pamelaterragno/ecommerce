@@ -213,6 +213,8 @@ a.custom-card:hover {
   border: 2px solid royalblue;
 }
 
-.nav-item {
+.userDisplay{
   display: flex;
+  padding: auto;
+  color: #fff;
 }

@@ -216,5 +216,6 @@ a.custom-card:hover {
 .userDisplay{
   display: flex;
   padding: auto;
+  padding-top: 5px;
   color: #fff;
 }

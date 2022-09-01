@@ -1,56 +1,9 @@
 // url to obtain array in json
 const JSON_PRODUCTS = PRODUCTS_URL + localStorage.getItem("catID")+ EXT_TYPE;
-const CONTAINER = document.getElementById("showProducts");
 
-// //fetch
-// fetch (JSON_PRODUCTS)
-//     .then(function(resp) {
-//         return resp.json();
-//     })
-//     .then (function(json){
-//     //show in console
-//         console.log(json);
-//     //function that itirate the array of products
-//         walk(json.products);
-//     })
-// //TO DO: SHOW AND HIDE SPINNER IN FETCH FUNCTION
-
-
-
-// //function that iritate the array and add the elements to CONTAINER
-//     function walk(array){
-//         for (let i of array) {
-//             //links of categories.js but with my variable i
-//          CONTAINER.innerHTML+=`
-//              <div onclick="setCatID(${i.id})" class="list-group-item list-group-item-action cursor-active">
-//                     <div class="row">
-//                      <div class="col-3">
-//                     <img src="${i.image}" alt="${i.description}" class="img-thumbnail">
-//                     </div>
-//                         <div class="col">
-//                     <div class="d-flex w-100 justify-content-between">
-//                         <h4 class="mb-1">${i.name}</h4>
-//                         <small class="text-muted">${i.soldCount} artículos</small>
-//                     </div>
-//                     <p class="mb-1">${i.description}</p>
-//                     <h1 class="price">${i.cost}${i.currency}</h1>
-//                 </div>
-//             </div>
-//         </div>
-//         `
-//     }
-// };
-
-
-// function setCatID(id){
-//     localStorage.setItem("catID", id);
-//     window.location = "products.html"
-// }
-
-
-const ORDER_ASC_BY_NAME = "AZ";
-const ORDER_DESC_BY_NAME = "ZA";
-const ORDER_BY_PROD_COUNT = "Cant.";
+const ORDER_ASC_BY_COST = "AZ";
+const ORDER_DESC_BY_COST = "ZA";
+const ORDER_BY_SOLD = "Cant.";
 let currentCategoriesArray = [];
 let currentSortCriteria = undefined;
 let minCount = undefined;
@@ -58,20 +11,20 @@ let maxCount = undefined;
 
 function sortCategories(criteria, array){
     let result = [];
-    if (criteria === ORDER_ASC_BY_NAME)
+    if (criteria === ORDER_ASC_BY_COST)
     {
         result = array.sort(function(a, b) {
             if ( a.cost < b.cost ){ return -1; }
             if ( a.cost > b.cost ){ return 1; }
             return 0;
         });
-    }else if (criteria === ORDER_DESC_BY_NAME){
+    }else if (criteria === ORDER_DESC_BY_COST){
         result = array.sort(function(a, b) {
             if ( a.cost > b.cost ){ return -1; }
             if ( a.cost < b.cost ){ return 1; }
             return 0;
         });
-    }else if (criteria === ORDER_BY_PROD_COUNT){
+    }else if (criteria === ORDER_BY_SOLD){
         result = array.sort(function(a, b) {
             let aCount = parseInt(a.soldCount);
             let bCount = parseInt(b.soldCount);
@@ -143,20 +96,20 @@ document.addEventListener("DOMContentLoaded", function(e){
         if (resultObj.status === "ok"){
             currentCategoriesArray = resultObj.data.products
             showCategoriesList()
-            //sortAndShowCategories(ORDER_ASC_BY_NAME, resultObj.data);
+            //sortAndShowCategories(ORDER_ASC_BY_COST, resultObj.data);
         }
     });
 
     document.getElementById("sortAsc").addEventListener("click", function(){
-        sortAndShowCategories(ORDER_ASC_BY_NAME);
+        sortAndShowCategories(ORDER_ASC_BY_COST);
     });
 
     document.getElementById("sortDesc").addEventListener("click", function(){
-        sortAndShowCategories(ORDER_DESC_BY_NAME);
+        sortAndShowCategories(ORDER_DESC_BY_COST);
     });
 
     document.getElementById("sortByCount").addEventListener("click", function(){
-        sortAndShowCategories(ORDER_BY_PROD_COUNT);
+        sortAndShowCategories(ORDER_BY_SOLD);
     });
 
     document.getElementById("clearRangeFilter").addEventListener("click", function(){
@@ -192,3 +145,51 @@ document.addEventListener("DOMContentLoaded", function(e){
         showCategoriesList();
     });
 });
+
+
+
+//OLD CODE
+// //fetch
+// fetch (JSON_PRODUCTS)
+//     .then(function(resp) {
+//         return resp.json();
+//     })
+//     .then (function(json){
+//     //show in console
+//         console.log(json);
+//     //function that itirate the array of products
+//         walk(json.products);
+//     })
+// //TO DO: SHOW AND HIDE SPINNER IN FETCH FUNCTION
+
+
+
+// //function that iritate the array and add the elements to CONTAINER
+//     function walk(array){
+//         for (let i of array) {
+//             //links of categories.js but with my variable i
+//          CONTAINER.innerHTML+=`
+//              <div onclick="setCatID(${i.id})" class="list-group-item list-group-item-action cursor-active">
+//                     <div class="row">
+//                      <div class="col-3">
+//                     <img src="${i.image}" alt="${i.description}" class="img-thumbnail">
+//                     </div>
+//                         <div class="col">
+//                     <div class="d-flex w-100 justify-content-between">
+//                         <h4 class="mb-1">${i.name}</h4>
+//                         <small class="text-muted">${i.soldCount} artículos</small>
+//                     </div>
+//                     <p class="mb-1">${i.description}</p>
+//                     <h1 class="price">${i.cost}${i.currency}</h1>
+//                 </div>
+//             </div>
+//         </div>
+//         `
+//     }
+// };
+
+
+// function setCatID(id){
+//     localStorage.setItem("catID", id);
+//     window.location = "products.html"
+// }

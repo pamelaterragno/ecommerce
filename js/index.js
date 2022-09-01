@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function(){
 });
 
 function login () {
-    if (localStorage.getItem("mail")=null) {
+    if (localStorage.getItem("mail")===null) {
         window.location="login.html"
     }
 };

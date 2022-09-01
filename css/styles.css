@@ -215,4 +215,5 @@ a.custom-card:hover {
 
 .userwelcome {
   color: whitesmoke;
+  display: flex;
 }

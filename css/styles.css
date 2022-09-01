@@ -11,7 +11,6 @@
 
 nav a {
   text-decoration: none;
-  padding-top: 20px;
 }
 
 .bd-placeholder-img {
@@ -217,5 +216,9 @@ a.custom-card:hover {
 
 #showUserEmail {
   color: white;
+  padding-top: 20px;
+}
+
+li.nav-item {
   padding-top: 20px;
 }

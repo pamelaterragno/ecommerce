@@ -22,5 +22,3 @@ BUTTON.addEventListener("click", function() {
 function inputRequired() {
     mail_user.value.required === true && pass_user.value.required === true;
  } 
-
- document.getElementById("usermail").innerHTML+=localStorage.getItem("mail");

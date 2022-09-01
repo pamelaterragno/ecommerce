@@ -1,25 +1,37 @@
-document.addEventListener("DOMContentLoaded", function(){
-    document.getElementById("autos").addEventListener("click", function() {
-        localStorage.setItem("catID", 101);
-        window.location = "products.html"
-    });
-    document.getElementById("juguetes").addEventListener("click", function() {
-        localStorage.setItem("catID", 102);
-        window.location = "products.html"
-    });
-    document.getElementById("muebles").addEventListener("click", function() {
-        localStorage.setItem("catID", 103);
-        window.location = "products.html";
-    });
 
-    login();
-});
+const BUTTON = document.getElementById("buttomSubmit");
+let mail_user = document.getElementById("email-input");
+let pass_user = document.getElementById("password-input");
+      
+//this file is named index for an exception, this should be called login
 
-function login () {
-    if (localStorage.getItem("mail")=null) {
-        window.location="login.html"
-    }
-};
 
-//this file is named main for an exception, this should be called index//
+BUTTON.addEventListener("click", function (){
 
+      const regularPhrase = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+      let comeIn = false
+      let errorEmail ="";
+      let errorPass ="";
+
+      if(!regularPhrase.test(mail_user.value)){
+          comeIn = true
+          errorEmail="El email ingresado no es correcto"
+      };
+  
+      if(pass_user.value.length <= 5){
+          comeIn = true
+          errorPass="La contraseña ingresada no es correcta"
+      };
+
+      if(comeIn){
+            document.getElementById("errorEmail").innerHTML=errorEmail;
+            document.getElementById("errorPass").innerHTML=errorPass;
+      } else {
+      //save value inputs in local storage
+          localStorage.setItem("mail", mail_user.value);
+      //redirect to main
+          window.location = "main.html"; 
+      }
+  
+      console.log(comeIn)
+  });

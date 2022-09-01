@@ -96,8 +96,8 @@ function showCategoriesList(){
     for(let i = 0; i < currentCategoriesArray.length; i++){
         let articulo = currentCategoriesArray[i];
 
-        if (((minCount == undefined) || (minCount != undefined && parseInt(articulo.soldCount) >= minCount)) &&
-            ((maxCount == undefined) || (maxCount != undefined && parseInt(articulo.soldCount) <= maxCount))){
+        if (((minCount == undefined) || (minCount != undefined && parseInt(articulo.cost) >= minCount)) &&
+            ((maxCount == undefined) || (maxCount != undefined && parseInt(articulo.cost) <= maxCount))){
 
             htmlContentToAppend += `
             <div onclick="setCatID(${articulo.id})" class="list-group-item list-group-item-action cursor-active">

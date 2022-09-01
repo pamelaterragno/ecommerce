@@ -16,4 +16,3 @@ document.addEventListener("DOMContentLoaded", function(){
 
 //this file is named main for an exception, this should be called index//
 
-document.getElementById("usermail").innerHTML+=localStorage.getItem("mail");

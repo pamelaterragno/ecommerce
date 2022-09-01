@@ -40,3 +40,6 @@ let getJSONData = function(url){
         return result;
     });
 }
+
+
+document.getElementById("usermail").innerHTML+=localStorage.getItem("mail");

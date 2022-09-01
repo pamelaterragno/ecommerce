@@ -94,24 +94,24 @@ function showCategoriesList(){
 
     let htmlContentToAppend = "";
     for(let i = 0; i < currentCategoriesArray.length; i++){
-        let i = currentCategoriesArray[i];
+        let articulo = currentCategoriesArray[i];
 
-        if (((minCount == undefined) || (minCount != undefined && parseInt(i.productCount) >= minCount)) &&
-            ((maxCount == undefined) || (maxCount != undefined && parseInt(i.productCount) <= maxCount))){
+        if (((minCount == undefined) || (minCount != undefined && parseInt(articulo.productCount) >= minCount)) &&
+            ((maxCount == undefined) || (maxCount != undefined && parseInt(articulo.productCount) <= maxCount))){
 
             htmlContentToAppend += `
-            <div onclick="setCatID(${i.id})" class="list-group-item list-group-item-action cursor-active">
+            <div onclick="setCatID(${articulo.id})" class="list-group-item list-group-item-action cursor-active">
                 <div class="row">
                     <div class="col-3">
-                        <img src="${i.image}" alt="${i.description}" class="img-thumbnail">
+                        <img src="${articulo.image}" alt="${articulo.description}" class="img-thumbnail">
                     </div>
                     <div class="col">
                         <div class="d-flex w-100 justify-content-between">
-                            <h4 class="mb-1">${i.name}</h4>
-                            <small class="text-muted">${i.soldCount} artículos</small>
+                            <h4 class="mb-1">${articulo.name}</h4>
+                            <small class="text-muted">${articulo.soldCount} artículos</small>
                         </div>
-                        <p class="mb-1">${i.description}</p>
-                        <p class="mb-1">${i.currency} ${i.cost}</p>
+                        <p class="mb-1">${articulo.description}</p>
+                        <p class="mb-1">${articulo.currency} ${articulo.cost}</p>
                     </div>
                 </div>
             </div>

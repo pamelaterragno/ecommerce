@@ -23,9 +23,4 @@ function inputRequired() {
     mail_user.value.required === true && pass_user.value.required === true;
  } 
 
- function showEmail(){
-      localStorage.setItem("mail", mail_user.value) 
-      return false;
- }
-
- 
+ document.getElementById("usermail").innerHTML+=localStorage.getItem("mail");

@@ -15,7 +15,6 @@ BUTTON.addEventListener("click", function() {
       }
 });
 
-localStorage.getItem("mail")
 
 //this file is named index for an exception, this should be called login
 
@@ -23,3 +22,10 @@ localStorage.getItem("mail")
 function inputRequired() {
     mail_user.value.required === true && pass_user.value.required === true;
  } 
+
+ function showEmail(){
+      localStorage.setItem("mail", mail_user.value) 
+      return false;
+ }
+
+ 

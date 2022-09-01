@@ -30,7 +30,7 @@ BUTTON.addEventListener("click", function (){
       //save value inputs in local storage
           localStorage.setItem("mail", mail_user.value);
       //redirect to main
-          window.location = "main.html"; 
+          window.location = "index.html"; 
       }
   
       console.log(comeIn)

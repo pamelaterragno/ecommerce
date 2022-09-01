@@ -1,6 +1,6 @@
 // url to obtain array in json
 const JSON_PRODUCTS = PRODUCTS_URL + localStorage.getItem("catID")+ EXT_TYPE;
-
+const SEARCHER_INPUT = document.getElementById("site-search");
 const ORDER_ASC_BY_COST = "AZ";
 const ORDER_DESC_BY_COST = "ZA";
 const ORDER_BY_SOLD = "Cant.";
@@ -8,6 +8,7 @@ let currentCategoriesArray = [];
 let currentSortCriteria = undefined;
 let minCount = undefined;
 let maxCount = undefined;
+
 
 function sortCategories(criteria, array){
     let result = [];
@@ -74,6 +75,20 @@ function showCategoriesList(){
         document.getElementById("cat-list-container").innerHTML = htmlContentToAppend;
     }
 }
+
+
+function filterArray(array){ 
+    keyword = SEARCHER_INPUT.value.toLowerCase();
+
+    filtro_keyword = array.filter(function(elements) {
+        elements=elements.toLowerCase();
+            return PRODUCT.indexOf(keyword) > -1;
+});
+
+filterArray(currentCategoriesArray);}
+
+
+
 
 function sortAndShowCategories(sortCriteria, categoriesArray){
     currentSortCriteria = sortCriteria;

@@ -71,7 +71,7 @@ function showCategoriesList(){
             `
         }
 
-        document.getElementById("cat-list-container").innerHTML = htmlContentToAppend;
+        document.getElementById("products-list-container").innerHTML = htmlContentToAppend;
     }
 }
 

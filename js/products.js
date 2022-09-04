@@ -1,4 +1,4 @@
-// url to obtain array in json
+
 const JSON_PRODUCTS = PRODUCTS_URL + localStorage.getItem("catID")+ EXT_TYPE;
 const SEARCHER_INPUT = document.getElementById("site-search");
 const ORDER_ASC_BY_COST = "AZ";
@@ -72,7 +72,7 @@ function showCategoriesList(){
             `
         }
 
-        document.getElementById("cat-list-container").innerHTML = htmlContentToAppend;
+        document.getElementById("prod-list-container").innerHTML = htmlContentToAppend;
     }
 }
 

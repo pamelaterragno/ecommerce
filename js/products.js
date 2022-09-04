@@ -51,8 +51,8 @@ function showProductsList(){
         let articulo = currentProductsArray[i];
 
         if (((minCount == undefined) || (minCount != undefined && parseInt(articulo.cost) >= minCount)) &&
-            ((maxCount == undefined) || (maxCount != undefined && parseInt(articulo.cost) <= maxCount))){
-
+            ((maxCount == undefined) || (maxCount != undefined && parseInt(articulo.cost) <= maxCount)))
+            {
             htmlContentToAppend += `
             <div onclick="setCatID(${articulo.id})" class="list-group-item list-group-item-action cursor-active">
                 <div class="row">
@@ -75,19 +75,6 @@ function showProductsList(){
         document.getElementById("prod-list-container").innerHTML = htmlContentToAppend;
     }
 }
-
-
-//pueba DESAFIATE, no funciona aún
-//function filterArray(array){ 
-//    keyword = SEARCHER_INPUT.value.toLowerCase();
-
-//filtro_keyword = array.filter(function(elements) {
-//    elements=elements.toLowerCase();
-//          return PRODUCT.indexOf(keyword) > -1;
-//});
-
-//filterArray(currentCategoriesArray);}
-//pueba DESAFIATE, no funciona aún
 
 
 
@@ -160,10 +147,19 @@ document.addEventListener("DOMContentLoaded", function(e){
 
         showProductsList();
     });
-});
 
 
-
+    
+    /* PUREBA DESAFIATE
+         document.getElementById("site-search").addEventListener("keyup", function(){
+           var searcher= document.getElementById("site-search").value;
+            
+            return currentProductsArray.filter(function(elem){
+                return elem.toLowerCase().indexOf(searcher.toLowerCase())>-1;
+            });
+            
+        })});
+PRUEBA DESAFIATE*/
 
 
 

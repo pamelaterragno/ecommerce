@@ -221,3 +221,7 @@ a.custom-card:hover {
 li.nav-item {
   padding-top: 20px;
 }
+
+#logOut {
+  background-color: rgba(0, 0, 0, 0.5);
+}

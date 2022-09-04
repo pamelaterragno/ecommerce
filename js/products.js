@@ -77,16 +77,17 @@ function showCategoriesList(){
 }
 
 
-function filterArray(array){ 
-    keyword = SEARCHER_INPUT.value.toLowerCase();
+//pueba DESAFIATE, no funciona aún
+//function filterArray(array){ 
+//    keyword = SEARCHER_INPUT.value.toLowerCase();
 
-    filtro_keyword = array.filter(function(elements) {
-        elements=elements.toLowerCase();
-            return PRODUCT.indexOf(keyword) > -1;
-});
+//filtro_keyword = array.filter(function(elements) {
+//    elements=elements.toLowerCase();
+//          return PRODUCT.indexOf(keyword) > -1;
+//});
 
-filterArray(currentCategoriesArray);}
-
+//filterArray(currentCategoriesArray);}
+//pueba DESAFIATE, no funciona aún
 
 
 
@@ -160,6 +161,9 @@ document.addEventListener("DOMContentLoaded", function(e){
         showCategoriesList();
     });
 });
+
+
+
 
 
 

@@ -147,9 +147,9 @@ document.addEventListener("DOMContentLoaded", function(e){
 
         showProductsList();
     });
+});
 
 
-    
     /* PUREBA DESAFIATE
          document.getElementById("site-search").addEventListener("keyup", function(){
            var searcher= document.getElementById("site-search").value;
@@ -202,9 +202,3 @@ PRUEBA DESAFIATE*/
 //         `
 //     }
 // };
-
-
-// function setCatID(id){
-//     localStorage.setItem("catID", id);
-//     window.location = "products.html"
-// }

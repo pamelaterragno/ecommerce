@@ -223,5 +223,9 @@ li.nav-item {
 }
 
 #logOut {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: #212529;
+  color: white;
+  padding-top: 60%;
+  border: none;
+  align-items: center;
 }

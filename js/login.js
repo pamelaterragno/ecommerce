@@ -32,6 +32,5 @@ BUTTON.addEventListener("click", function (){
       //redirect to main
           window.location = "index.html"; 
       }
-  
-      console.log(comeIn)
+
   });

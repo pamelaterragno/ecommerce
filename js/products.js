@@ -39,10 +39,17 @@ function sortProducts(criteria, array){
     return result;
 }
 
-function setCatID(id) {
-    localStorage.setItem("catID", id);
-    window.location = "products.html"
+// function setCatID(id) {
+//     localStorage.setItem("catID", id);
+//     window.location = "products.html"
+// }
+
+
+function setProdID(id){
+    localStorage.setItem("prodID", id);
+    window.location="product-info.html"
 }
+
 
 function showProductsList(){
 

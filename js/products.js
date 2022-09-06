@@ -39,14 +39,13 @@ function sortProducts(criteria, array){
     return result;
 }
 
-// function setCatID(id) {
+//  function setCatID(id) {
 //     localStorage.setItem("catID", id);
 //     window.location = "products.html"
 // }
 
-
-function setProdID(id){
-    localStorage.setItem("prodID", id);
+function setProdID(articulo.id){
+    localStorage.setItem("prodID", articulo.id);
     window.location="product-info.html"
 }
 
@@ -61,7 +60,7 @@ function showProductsList(){
             ((maxCount == undefined) || (maxCount != undefined && parseInt(articulo.cost) <= maxCount)))
             {
             htmlContentToAppend += `
-            <div onclick="setCatID(${articulo.id})" class="list-group-item list-group-item-action cursor-active">
+            <div onclick="setProdID(${articulo.id})" class="list-group-item list-group-item-action cursor-active">
                 <div class="row">
                     <div class="col-3">
                         <img src="${articulo.image}" alt="${articulo.description}" class="img-thumbnail">
@@ -155,6 +154,7 @@ document.addEventListener("DOMContentLoaded", function(e){
         showProductsList();
     });
 });
+
 
 
     /* PUREBA DESAFIATE

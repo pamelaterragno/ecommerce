@@ -41,16 +41,16 @@ function showArrayProd(){
                   <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="${infoProductsArray.images[0]}" class="d-block w-100" alt="first image">
+      <img src="${infoProductsArray.images[0]}" class="d-block w-80" alt="first image">
     </div>
     <div class="carousel-item">
-      <img src="${infoProductsArray.images[1]}" class="d-block w-100" alt="scn image">
+      <img src="${infoProductsArray.images[1]}" class="d-block w-80" alt="scn image">
     </div>
     <div class="carousel-item">
-      <img src="${infoProductsArray.images[2]}" class="d-block w-100" alt="third image">
+      <img src="${infoProductsArray.images[2]}" class="d-block w-80" alt="third image">
     </div>
     <div class="carousel-item">
-      <img src="${infoProductsArray.images[3]}" class="d-block w-100" alt="fourth image">
+      <img src="${infoProductsArray.images[3]}" class="d-block w-80" alt="fourth image">
     </div>
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">

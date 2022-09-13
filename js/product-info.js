@@ -27,11 +27,8 @@ function showArrayProd(){
     let htmlContentToAppend = "";
     
             htmlContentToAppend += `
-            <div onclick="setProdID(${infoProductsArray.id})" class="list-group-item list-group-item-action cursor-active">
                 <div class="row">
-                    <div class="col-3">
-                        <img src="${infoProductsArray.images[0]}" alt="${infoProductsArray.description}" class="img-thumbnail">
-                    </div>
+                   
                     <div class="col">
                         <div class="d-flex w-100 justify-content-between">
                             <h4 class="mb-1">${infoProductsArray.name}</h4>
@@ -40,8 +37,10 @@ function showArrayProd(){
                         <p class="mb-1">${infoProductsArray.description}</p>
                         <p class="mb-1">${infoProductsArray.currency} ${infoProductsArray.cost}</p>
                     </div>
+                    <div class="col-3">
+                    <img src="${infoProductsArray.images[0]}" class="img-thumbnail">
                 </div>
-            </div>
+                </div>
             `
             document.getElementById("showProduct").innerHTML = htmlContentToAppend;
 

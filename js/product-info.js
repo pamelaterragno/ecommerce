@@ -22,6 +22,7 @@ document.addEventListener("DOMContentLoaded", function(e){
 
 });
 
+
 function showArrayProd(){
 
     let htmlContentToAppend = "";
@@ -76,8 +77,8 @@ function showArrayProd(){
 
         function showArrayComments() {
           let htmlContentToAppend = "";
-          for(let i = 0; i < infoProductsArray.length; i++){
-              let i = infoProductsArray[i];
+          for(let i = 0; i < commentProductsArray.length; i++){
+              let i = commentProductsArray[i];
     
       
                   htmlContentToAppend += `

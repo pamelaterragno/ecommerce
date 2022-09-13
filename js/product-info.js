@@ -27,18 +27,21 @@ function showArrayProd(){
     let htmlContentToAppend = "";
     
             htmlContentToAppend += `
-                <div class="row">
+                <div class="col">
                    
                     <div class="col">
                         <div class="d-flex w-100 justify-content-between">
                             <h4 class="mb-1">${infoProductsArray.name}</h4>
-                            <small class="text-muted">${infoProductsArray.soldCount} artículos</small>
+                        
                         </div>
                         <p class="mb-1">${infoProductsArray.description}</p>
                         <p class="mb-1">${infoProductsArray.currency} ${infoProductsArray.cost}</p>
                     </div>
                     <div class="col-3">
                     <img src="${infoProductsArray.images[0]}" class="img-thumbnail">
+                    <img src="${infoProductsArray.images[1]}" class="img-thumbnail">
+                    <img src="${infoProductsArray.images[2]}" class="img-thumbnail">
+                    <img src="${infoProductsArray.images[3]}" class="img-thumbnail">
                 </div>
                 </div>
             `

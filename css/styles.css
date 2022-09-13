@@ -229,3 +229,8 @@ li.nav-item {
   border: none;
   align-items: center;
 }
+
+.wide {
+  width: 300px;
+  height: auto;
+}

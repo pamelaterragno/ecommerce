@@ -37,7 +37,7 @@ function showArrayProd(){
                         <p class="mb-1">${infoProductsArray.description}</p>
                         <p class="mb-1">${infoProductsArray.currency} ${infoProductsArray.cost}</p>
                     </div>
-                    <div class "300-px-wide">
+                    <div class="wide">
                   <div id="carouselExampleControls" class="carousel carousel-dark slide" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">

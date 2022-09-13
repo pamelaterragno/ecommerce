@@ -233,6 +233,5 @@ li.nav-item {
 .wide {
   width: 55%;
   height: auto;
-  position: fixed;
-  align-self: center;
+  position: relative;
 }

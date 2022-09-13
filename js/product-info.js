@@ -37,11 +37,24 @@ function showArrayProd(){
                         <p class="mb-1">${infoProductsArray.description}</p>
                         <p class="mb-1">${infoProductsArray.currency} ${infoProductsArray.cost}</p>
                     </div>
+                    
                     <div class="row">
+                    
+                    <div class="col">
                     <img src="${infoProductsArray.images[0]}" class="img-thumbnail">
+                    </div>
+
+                    <div class="col">
                     <img src="${infoProductsArray.images[1]}" class="img-thumbnail">
+                    </div>
+
+                    <div class="col">
                     <img src="${infoProductsArray.images[2]}" class="img-thumbnail">
+                    </div>
+
+                    <div class="col">
                     <img src="${infoProductsArray.images[3]}" class="img-thumbnail">
+                    </div>
                 </div>
                 </div>
             `

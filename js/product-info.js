@@ -64,11 +64,44 @@ function showArrayProd(){
 </div>
 </div>
 
-
-
                 </div>
                 </div>
             `
             document.getElementById("showProduct").innerHTML = htmlContentToAppend;
 
         }
+
+
+
+
+
+
+
+
+        function showArrayComments() {
+          let htmlContentToAppend = "";
+          for(let i = 0; i < infoProductsArray.length; i++){
+              let i = infoProductsArray[i];
+    
+      
+                  htmlContentToAppend += `
+                  <div onclick="setProdID(${i.score})" class="list-group-item list-group-item-action cursor-active">
+                      <div class="row">
+                        
+                          <div class="col">
+                              <div class="d-flex w-100 justify-content-between">
+                                  <h4 class="mb-1">${i.description}</h4>
+                                  <small class="text-muted">${i.user} artículos</small>
+                              </div>
+                              <p class="mb-1">${i.dateTime}</p>
+                            
+                          </div>
+                      </div>
+                  </div>
+                  `
+              }
+      
+              document.getElementById("showComent").innerHTML = htmlContentToAppend;
+          }
+      
+        

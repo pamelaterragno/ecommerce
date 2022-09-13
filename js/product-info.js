@@ -83,15 +83,16 @@ function showArrayProd(){
                   htmlContentToAppend += `
                   <div onclick="setProdID(${a.score})" class="list-group-item list-group-item-action cursor-active">
                       <div class="row">
-                        
+                      <div class="wide">
                           <div class="col">
                               <div class="d-flex w-100 justify-content-between">
                                   <h4 class="mb-1">${a.description}</h4>
-                                  <small class="text-muted">${a.user} artículos</small>
+                                  <small class="text-muted">${a.user}</small>
                               </div>
                               <p class="mb-1">${a.dateTime}</p>
                             
                           </div>
+                      </div>
                       </div>
                   </div>
                   `

@@ -231,6 +231,7 @@ li.nav-item {
 }
 
 .wide {
-  width: 300px;
+  width: 75%;
   height: auto;
+  position: absolute;
 }

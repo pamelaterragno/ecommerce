@@ -237,7 +237,8 @@ li.nav-item {
   margin-right: auto;
   padding-top: 30px;
 }
+
 .subtitle {
-  align-items: center;
+  align-self: center;
   padding-top: 20px;
 }

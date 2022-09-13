@@ -39,14 +39,9 @@ function sortProducts(criteria, array){
     return result;
 }
 
-//  function setCatID(id) {
-//     localStorage.setItem("catID", id);
-//     window.location = "products.html"
-// }
-
-function setProdID(articulo.id){
-    localStorage.setItem("prodID", articulo.id);
-    window.location="product-info.html"
+ function setProdID(id) {
+    localStorage.setItem("prodID", id);
+    window.location = "products-info.html"
 }
 
 
@@ -154,6 +149,14 @@ document.addEventListener("DOMContentLoaded", function(e){
         showProductsList();
     });
 });
+
+
+
+
+// function setProdID(articulo.id){
+//     localStorage.setItem("prodID", articulo.id);
+//     window.location="product-info.html"
+// }
 
 
 

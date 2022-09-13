@@ -32,7 +32,7 @@ function showArrayProd(){
                    
                     <div class="col">
                         <div class="d-flex w-100 justify-content-between">
-                            <h1 class="text-center">${infoProductsArray.name}</h1>
+                            <h1>${infoProductsArray.name}</h1>
                         
                         </div>
                         <p class="mb-1">${infoProductsArray.description}</p>

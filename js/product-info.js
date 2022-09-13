@@ -38,7 +38,7 @@ function showArrayProd(){
                         <p class="mb-1">${infoProductsArray.currency} ${infoProductsArray.cost}</p>
                     </div>
                     
-                  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                  <div id="carouselExampleControls" class="carousel carousel-dark slide" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
       <img src="${infoProductsArray.images[0]}" class="d-block w-80" alt="first image">

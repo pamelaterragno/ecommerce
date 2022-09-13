@@ -78,19 +78,18 @@ function showArrayProd(){
         function showArrayComments() {
           let htmlContentToAppend = "";
           for(let i = 0; i < commentProductsArray.length; i++){
-              let i = commentProductsArray[i];
+              let a = commentProductsArray[i];
     
-      
                   htmlContentToAppend += `
-                  <div onclick="setProdID(${i.score})" class="list-group-item list-group-item-action cursor-active">
+                  <div onclick="setProdID(${a.score})" class="list-group-item list-group-item-action cursor-active">
                       <div class="row">
                         
                           <div class="col">
                               <div class="d-flex w-100 justify-content-between">
-                                  <h4 class="mb-1">${i.description}</h4>
-                                  <small class="text-muted">${i.user} artículos</small>
+                                  <h4 class="mb-1">${a.description}</h4>
+                                  <small class="text-muted">${a.user} artículos</small>
                               </div>
-                              <p class="mb-1">${i.dateTime}</p>
+                              <p class="mb-1">${a.dateTime}</p>
                             
                           </div>
                       </div>

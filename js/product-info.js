@@ -46,5 +46,3 @@ function showArrayProd(){
         }
 
         document.getElementById("showProduct").innerHTML = htmlContentToAppend;
-    }
-}

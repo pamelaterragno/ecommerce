@@ -234,4 +234,5 @@ li.nav-item {
   width: 55%;
   height: auto;
   position: fixed;
+  align-self: center;
 }

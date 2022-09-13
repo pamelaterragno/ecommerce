@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function(e){
 
     getJSONData(PRODUCTS_COMMENTS).then(function(resultObj){
         if (resultObj.status === "ok"){
-            infoProductsArray = resultObj.data
+            commentProductsArray = resultObj.data
             showArrayComments()
         }
 
@@ -70,10 +70,6 @@ function showArrayProd(){
             document.getElementById("showProduct").innerHTML = htmlContentToAppend;
 
         }
-
-
-
-
 
 
 

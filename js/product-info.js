@@ -87,9 +87,9 @@ function showArrayProd(){
                           <div class="col">
                               <div class="d-flex w-100 justify-content-between">
                                   <h4 class="mb-1">${a.description} ${a.score}</h4>
-                                  <small class="text-muted">${a.user}</small>
+                                  <small class="text-muted">${a.dateTime}</small>
                               </div>
-                              <p class="mb-1">${a.dateTime}</p>
+                              <p class="mb-1">${a.user}</p>
                             
                           </div>
                       </div>

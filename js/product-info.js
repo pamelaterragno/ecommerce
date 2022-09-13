@@ -37,20 +37,20 @@ function showArrayProd(){
                         <p class="mb-1">${infoProductsArray.description}</p>
                         <p class="mb-1">${infoProductsArray.currency} ${infoProductsArray.cost}</p>
                     </div>
-                    
+
                   <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="${infoProductsArray.images[0]}" class="d-block w-100" alt="first image">
+      <img src="${infoProductsArray.images[0]}" class="d-block w-100" alt="first image" max-width="80%" height="auto>
     </div>
     <div class="carousel-item">
-      <img src="${infoProductsArray.images[1]}" class="d-block w-100" alt="scn image">
+      <img src="${infoProductsArray.images[1]}" class="d-block w-100" alt="scn image" max-width="80%" height="auto>
     </div>
     <div class="carousel-item">
-      <img src="${infoProductsArray.images[2]}" class="d-block w-100" alt="third image">
+      <img src="${infoProductsArray.images[2]}" class="d-block w-100" alt="third image" max-width="80%" height="auto>
     </div>
     <div class="carousel-item">
-      <img src="${infoProductsArray.images[3]}" class="d-block w-100" alt="fourth image">
+      <img src="${infoProductsArray.images[3]}" class="d-block w-100" alt="fourth image" max-width="80%" height="auto>
     </div>
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">

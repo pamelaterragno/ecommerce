@@ -43,6 +43,6 @@ function showArrayProd(){
                 </div>
             </div>
             `
-        }
+            document.getElementById("showProduct").innerHTML = htmlContentToAppend;
 
-        document.getElementById("showProduct").innerHTML = htmlContentToAppend;
+        }

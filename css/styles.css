@@ -248,17 +248,6 @@ li.nav-item {
 }
 
 
-.bdge{
-  width:40px;
-  height:22px;
-  background-color:red;
-  border-radius:4px;
-  font-size:12px;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  color:#fff
-}
 
 
 #colorBtnCancelar {

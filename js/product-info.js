@@ -102,3 +102,45 @@ function showArrayProd(){
           }
       
         
+
+          const ADD_COMMENT = document.getElementById("agregar");
+          const INPUT_COMMENT = document.getElementById("item");
+          const CONTAINER_ARRAYTAG = document.getElementById("contenedor");
+          let arrayComment = [];
+
+function comment(item){
+  let items={
+    item : item,
+  }
+  arrayComment.push(items);
+  return items;
+}
+
+function saveComment(){
+  localStorage.setItem('txtComment', JSON.stringify(arrayComment));
+  printComment();
+}
+
+function printComment(){
+  CONTAINER_ARRAYTAG.innerHTML='';
+  arrayComment = JSON.parse(localStorage.getItem('txtComment'))
+  console.log(arrayComment)
+
+  if(arrayComment === null){
+    arrayComment = [];
+  } else {
+    arrayComment.forEach (element => {
+      CONTAINER_ARRAYTAG.innerHTML += `
+      <div class="form-control text-center alert-info">
+          <b>${element.item}</b>          
+      </div>    
+      `
+    });
+  }
+}
+
+
+ADD_COMMENT.addEventListener("click", function(){
+  CONTAINER_ARRAYTAG.innerHTML="";
+})
+document.addEventListener('DOMContentLoaded', printComment());

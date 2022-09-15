@@ -269,6 +269,7 @@ li.nav-item {
 #colorBtnEnviar {
   background-color: #212529;
   border-color: #212529;
+  display: flex;
 }
 
 .form-control {

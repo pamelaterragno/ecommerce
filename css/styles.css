@@ -253,7 +253,6 @@ li.nav-item {
 #colorBtnCancelar {
   background-color: #212529;
   border-color: #212529;
-  padding-right: 0%;
 }
 
 #colorBtnEnviar {
@@ -264,4 +263,8 @@ li.nav-item {
 
 .form-control {
   width: 80%;
+}
+
+.pull-right {
+  padding-right:197px;
 }

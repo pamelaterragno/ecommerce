@@ -244,5 +244,5 @@ li.nav-item {
 }
 
 .commentsection {
-  size: 40%;
+  size-adjust: 250px;
 }

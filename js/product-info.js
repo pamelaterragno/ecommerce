@@ -86,7 +86,14 @@ function showArrayProd(){
                       <div class="wide">
                           <div class="col">
                               <div class="d-flex w-100 justify-content-between">
-                                  <h4 class="mb-1">${a.description} ${a.score}</h4>
+                                  <h4 class="mb-1">${a.description}
+                                  <div> 
+                                  ` 
+                                  for (let i = 1; i<a.score; i++) {
+                                    htmlContentToAppend += `<span class="fa fa-star checked">`
+                                  };
+                                  `
+                                  </div>></h4>
                                   <small class="text-muted">${a.dateTime}</small>
                               </div>
                               <p class="mb-1">${a.user}</p>
@@ -96,10 +103,7 @@ function showArrayProd(){
                       </div>
                   </div>
                   `
-              } 
-            for (let i = 1; i<a.score; i++) {
-              htmlContentToAppend += `<span class="fa fa-star checked">`
-            }
+          }
       
               document.getElementById("showComent").innerHTML = htmlContentToAppend;
           }

@@ -28,15 +28,20 @@ function showArrayProd(){
     let htmlContentToAppend = "";
     
             htmlContentToAppend += `
+            
                 <div class="col">
                    
                     <div class="col">
-                        <div class="d-flex w-100 justify-content-between">
+                        <div class="descriptionProduct">
+                       
                             <h1>${infoProductsArray.name}</h1>
                         
-                        </div>
+                        
+                        <h4>Descripción</h4>
                         <p class="mb-1">${infoProductsArray.description}</p>
+                        <h4>Precio:</h4>
                         <p class="mb-1">${infoProductsArray.currency} ${infoProductsArray.cost}</p>
+                        </div>
                     </div>
                     <div class="wide">
                   <div id="carouselExampleControls" class="carousel carousel-dark slide" data-bs-ride="carousel">
@@ -80,30 +85,34 @@ function showArrayProd(){
           for(let i = 0; i < commentProductsArray.length; i++){
               let a = commentProductsArray[i];
     
-                  htmlContentToAppend += `
+                  htmlContentToAppend +=  `
                   
-                      <div class="row">
-                      <div class="wide">
-                          <div class="col">
-                          <div> 
-                                  ` 
-                                  for (let i = 1; i<a.score; i++) {
-                                    htmlContentToAppend += `<span class="fa fa-star checked">`
-                                  };
-                                  `
-                                  </div>
-                              <div class="d-flex w-100 justify-content-between">
-                                  <h4 class="mb-1">${a.description}
-                                  </h4>
-                                  <small class="text-muted">${a.dateTime}</small>
-                              </div>
-                              <p class="mb-1">${a.user}</p>
-                            
+                  <div class="row">
+                    <div class="wide">
+                    
+                        <div class="col">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h4 class="mb-1">${a.description}</h4>
+                                <small class="text-muted">${a.dateTime}</small>
+                            </div>
+                            <p class="mb-1">${a.user}</p>
+                            ` 
+                            for(let i = 0; i < 5; i++){
+                              if (i < a.score){
+                                htmlContentToAppend += `<span class="fa fa-star checked"></span>`
+                              } else {
+                                htmlContentToAppend += `<span class="fa fa-star"></span>`
+                              }
+                            };
+                            htmlContentToAppend+=
+                            `
                           </div>
-                      </div>
-                      </div>
-                  </div>
-                  `
+                        </div>
+                    </div>
+                
+     
+                
+                `
           }
       
               document.getElementById("showComent").innerHTML = htmlContentToAppend;

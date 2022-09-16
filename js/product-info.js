@@ -96,7 +96,10 @@ function showArrayProd(){
                       </div>
                   </div>
                   `
-              }
+              } 
+            for (let i = 1; i<a.score; i++) {
+              htmlContentToAppend += `<span class="fa fa-star checked">`
+            }
       
               document.getElementById("showComent").innerHTML = htmlContentToAppend;
           }

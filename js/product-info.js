@@ -107,7 +107,7 @@ function showArrayProd(){
                        
 do {
   let i=0;
-  htmlContentToAppend+=`<span class="fa fa-star checked"></span>`;
+  htmlContentToAppend+=`<span class="fa fa-star checked"></span>`
   i=i+1;
 } while (i<a.score);
 

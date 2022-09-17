@@ -110,10 +110,7 @@ function showArrayProd(){
                                   htmlContentToAppend+=`<span class="fa fa-star checked"></span>`
                                   n=n+1;
                                     } while (n<a.score);
-
-                                    htmlContentToAppend+=
-                               
-
+          
                                     for (let c = 0; c < result; c++){
                                       if (c<result){
                                       htmlContentToAppend+=`<span class="fa fa-star"></span>`

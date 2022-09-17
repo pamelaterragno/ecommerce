@@ -104,14 +104,29 @@ function showArrayProd(){
                             </div>
                             <p class="mb-1">${a.user}</p>
                             ` 
-                            for(let i = 0; i < 5; i++){
-                              if (i < a.score){
-                                htmlContentToAppend += `<span class="fa fa-star checked"></span>`
-                              } else {
-                                htmlContentToAppend += `<span class="fa fa-star"></span>`
-                              }
-                            };
-                            htmlContentToAppend+=
+                            // for(let i = 0; i < 5; i++){
+                            //   if (i < a.score){
+                            //     htmlContentToAppend += `<span class="fa fa-star checked"></span>`
+                            //   } else {
+                            //     htmlContentToAppend += `<span class="fa fa-star"></span>`
+                            //   }
+                            // };
+                            // htmlContentToAppend+=
+
+for (let i=0; i<5; i++){
+  if (i<a.score){
+    htmlContentToAppend+=`<span class="fa fa-star checked"></span>`
+  } else {
+let no_stars = 5-a.score;
+htmlContentToAppend+=`<span class="fa fa-star"></span>`
+     
+    }
+  };
+  htmlContentToAppend+=
+
+
+
+
                             `
                           </div>
                         </div>

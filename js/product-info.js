@@ -2,6 +2,7 @@ const PRODUCTS_INFO = PRODUCT_INFO_URL + localStorage.getItem("prodID") + EXT_TY
 const PRODUCTS_COMMENTS = PRODUCT_INFO_COMMENTS_URL + localStorage.getItem("prodID") + EXT_TYPE;
 
 
+//fetch para traer info y comentarios de producto
 
 document.addEventListener("DOMContentLoaded", function(e){
     getJSONData(PRODUCTS_INFO).then(function(resultObj){
@@ -21,6 +22,9 @@ document.addEventListener("DOMContentLoaded", function(e){
     });
 
 });
+
+
+
 
 
 function showArrayProd(){
@@ -76,6 +80,9 @@ function showArrayProd(){
             document.getElementById("showProduct").innerHTML = htmlContentToAppend;
 
         }
+//utilicé boostrap5 para generar el carrousel
+
+
 
 
 

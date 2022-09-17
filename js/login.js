@@ -3,7 +3,6 @@ const BUTTON = document.getElementById("buttomSubmit");
 let mail_user = document.getElementById("email-input");
 let pass_user = document.getElementById("password-input");
       
-//this file is named index for an exception, this should be called login
 
 
 BUTTON.addEventListener("click", function (){

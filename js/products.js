@@ -39,6 +39,7 @@ function sortProducts(criteria, array){
     return result;
 }
 
+//local storage prod ID, redireccionar a info del producto
  function setProdID(id) {
     localStorage.setItem("prodID", id);
     window.location = "product-info.html";
@@ -88,7 +89,7 @@ function sortAndShowCategories(sortCriteria, categoriesArray){
 
     currentProductsArray = sortProducts(currentSortCriteria, currentProductsArray);
 
-    //Muestro las categorías ordenadas
+    //Muestro las productos ordenadas
     showProductsList();
 }
 
@@ -100,7 +101,7 @@ document.addEventListener("DOMContentLoaded", function(e){
         if (resultObj.status === "ok"){
             currentProductsArray = resultObj.data.products
             showProductsList()
-            //sortAndShowCategories(ORDER_ASC_BY_COST, resultObj.data);
+            
         }
     });
 
@@ -128,7 +129,7 @@ document.addEventListener("DOMContentLoaded", function(e){
 
     document.getElementById("rangeFilterCount").addEventListener("click", function(){
         //Obtengo el mínimo y máximo de los intervalos para filtrar por cantidad
-        //de productos por categoría.
+        //de productos
         minCount = document.getElementById("rangeFilterCountMin").value;
         maxCount = document.getElementById("rangeFilterCountMax").value;
 

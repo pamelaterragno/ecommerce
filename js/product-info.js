@@ -131,5 +131,3 @@ function showArrayProd(){
       
               document.getElementById("showComent").innerHTML = htmlContentToAppend;
           }
-
-document.getElementById("relatedproducts").innerHTML = infoProductsArray.relatedProducts[0];

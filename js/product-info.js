@@ -112,9 +112,9 @@ function showArrayProd(){
                                     } while (n<a.score);
 
                                     htmlContentToAppend+=
-                                  
-                              
-                                for(let n = 0; i < result; i++){
+          
+
+                                for(let n = 0; i < result; n++){
                                   htmlContentToAppend+=`<span class="fa fa-star"></span>`
                                 }
                                     htmlContentToAppend+=

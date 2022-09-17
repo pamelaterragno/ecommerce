@@ -104,13 +104,19 @@ function showArrayProd(){
                             </div>
                             <p class="mb-1">${a.user}</p>
                             ` 
-let n=0;                   
-do {
-  
-  htmlContentToAppend+=`<span class="fa fa-star checked"></span>`
-  n=n+1;
-} while (n<a.score);
+                              let n=0;   
+                              let result = "";                
+                                do {
+                                  htmlContentToAppend+=`<span class="fa fa-star checked"></span>`
+                                  n=n+1;
+                                    } while (n<a.score);
 
+                                    htmlContentToAppend+=
+                                  
+                              result=5-a.score
+                                for(let n = 0; i < result; i++){
+                                  htmlContentToAppend+=`<span class="fa fa-star"></span>`
+}
 htmlContentToAppend+=
 
 

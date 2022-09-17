@@ -111,7 +111,7 @@ do {
   i=i+1;
 } while (i<a.score);
 
-
+htmlContentToAppend+=
 
 
                             `

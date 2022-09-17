@@ -105,7 +105,7 @@ function showArrayProd(){
                             <p class="mb-1">${a.user}</p>
                             ` 
                               let n=0;   
-                              let result = "";                
+                              let result = 5-a.score;                
                                 do {
                                   htmlContentToAppend+=`<span class="fa fa-star checked"></span>`
                                   n=n+1;
@@ -113,13 +113,11 @@ function showArrayProd(){
 
                                     htmlContentToAppend+=
                                   
-                              result=5-a.score
+                              
                                 for(let n = 0; i < result; i++){
                                   htmlContentToAppend+=`<span class="fa fa-star"></span>`
-}
-htmlContentToAppend+=
-
-
+                                }
+                                    htmlContentToAppend+=
                             `
                           </div>
                         </div>

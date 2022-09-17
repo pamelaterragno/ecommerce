@@ -110,7 +110,7 @@ for (let i=0; i<5; i++){
   if (i<a.score){
     htmlContentToAppend+=`<span class="fa fa-star checked"></span>`
   } else {
-let no_stars = 5-a.score;
+let no_stars = i-a.score;
 htmlContentToAppend+=`<span class="fa fa-star"></span>`
      
     }
@@ -132,15 +132,3 @@ htmlContentToAppend+=`<span class="fa fa-star"></span>`
       
               document.getElementById("showComent").innerHTML = htmlContentToAppend;
           }
-
-
-
-
-           // for(let i = 0; i < 5; i++){
-                            //   if (i < a.score){
-                            //     htmlContentToAppend += `<span class="fa fa-star checked"></span>`
-                            //   } else {
-                            //     htmlContentToAppend += `<span class="fa fa-star"></span>`
-                            //   }
-                            // };
-                            // htmlContentToAppend+=

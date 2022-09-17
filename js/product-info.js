@@ -119,7 +119,6 @@ function showArrayProd(){
                           
                                         htmlContentToAppend+=
                              
-                                
                             `
                           </div>
                         </div>
@@ -133,23 +132,3 @@ function showArrayProd(){
               document.getElementById("showComent").innerHTML = htmlContentToAppend;
           }
 
-
-
-
-
-
-
-
-
-
-          // for (let i=0; i<5; i++){
-          //   if (i<a.score){
-          //     htmlContentToAppend+=`<span class="fa fa-star checked"></span>`
-          //   } else {
-          
-          // htmlContentToAppend+=`<span class="fa fa-star"></span>`
-               
-          //     }
-          //   };
-          //   htmlContentToAppend+=
-          

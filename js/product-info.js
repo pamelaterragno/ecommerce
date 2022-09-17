@@ -114,7 +114,7 @@ function showArrayProd(){
                                     htmlContentToAppend+=
                                
 
-                                for (let n = 0; n < result; n++){
+                                for (let c = 0; c < result; c++){
                                   htmlContentToAppend+=`<span class="fa fa-star"></span>`
                                 }
 

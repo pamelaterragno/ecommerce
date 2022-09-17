@@ -132,4 +132,4 @@ function showArrayProd(){
               document.getElementById("showComent").innerHTML = htmlContentToAppend;
           }
 
-document.getElementById("relatedproducts").innerHTML = infoProductsArray.relatedProducts[0] +infoProductsArray.relatedProducts[1];
+document.getElementById("relatedproducts").innerHTML = infoProductsArray.relatedProducts[0];

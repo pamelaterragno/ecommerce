@@ -91,10 +91,10 @@ function showRelated(){
   htmlContentToAppend+=`
   
   
-  <div class="card" style="width: 18rem;" "display: flex;">
-  <img src="${a.image}" class="card-img-top" alt="...">
+  <div class="card" style="width: 18rem;">
+  <img src="${a.image}" class="card-img-top" alt="${a.name}">
   <div class="card-body">
-    <h5 class="${a.name}">${a.name}</h5>
+    <h5 class="name">${a.name}</h5>
     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
     <a href="product-info.html" class="btn btn-primary">Comprar</a>
   </div>

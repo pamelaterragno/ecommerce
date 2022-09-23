@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function(e){
         if (resultObj.status === "ok"){
             infoProductsArray = resultObj.data
             showArrayProd()
-
+            showRelated()
         }
     });
 
@@ -84,6 +84,24 @@ function showArrayProd(){
 
 
 
+function showRelated(){
+  let htmlContentToAppend="";
+  htmlContentToAppend+=`
+  
+  
+  <div class="card" style="width: 18rem;">
+  <img src="${infoProductsArray.relatedProducts[2]}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="${infoProductsArray.relatedProducts[1]}">${infoProductsArray.relatedProducts[1]}</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="product-info.html" class="btn btn-primary">Comprar</a>
+  </div>
+</div>
+}
+`
+document.getElementById("showRelated").innerHTML = htmlContentToAppend
+
+}
 
 
 

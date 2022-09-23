@@ -96,7 +96,7 @@ function showRelated(){
   <div class="card-body">
     <h5 class="name">${a.name}</h5>
     
-    <a href="product-info.html" onclick="setProdID("${a.id}")" class="btn btn-primary">Ver más</a>
+    <a href="product-info.html" onclick="setProdID(${a.id})" class="btn btn-primary">Ver más</a>
   </div>
 </div>
 

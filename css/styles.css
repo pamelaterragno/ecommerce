@@ -257,3 +257,8 @@ li.nav-item {
 .descriptionProduct{
   text-align: center;
 }
+
+
+#card {
+  display: flex;
+}

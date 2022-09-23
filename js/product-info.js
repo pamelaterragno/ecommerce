@@ -91,14 +91,14 @@ function showRelated(){
   htmlContentToAppend+=`
   
   
-  
+  <div class="card" style="width: 18rem;">
   <img src="${a.image}" class="card-img-top" alt="${a.name}">
   <div class="card-body">
     <h5 class="name">${a.name}</h5>
     
     <a href="product-info.html" class="btn btn-primary">Comprar</a>
   </div>
-
+</div>
 
 `
 document.getElementById("showRelated").innerHTML = htmlContentToAppend

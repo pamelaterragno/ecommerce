@@ -257,3 +257,7 @@ li.nav-item {
 .descriptionProduct{
   text-align: center;
 }
+
+#col-md-2{
+  display: flex;
+}

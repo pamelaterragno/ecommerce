@@ -87,7 +87,7 @@ function showArrayProd(){
 function showRelated(){
   let htmlContentToAppend="";
 
-  let a = infoProductsArray.relatedProducts;
+  let a = infoProductsArray.relatedProducts[1];
   htmlContentToAppend+=`
   
   

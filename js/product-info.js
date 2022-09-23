@@ -91,7 +91,7 @@ function showRelated(){
   htmlContentToAppend+=`
   
   
-  <div class="cards" style="width: 35%;">
+  <div class="card" style="width: 35%;">
   <img src="${a.image}" class="card-img-top" alt="${a.name}">
   <div class="card-body">
     <h5 class="name">${a.name}</h5>

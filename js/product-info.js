@@ -96,7 +96,7 @@ function showRelated(){
   <div class="card-body">
     <h5 class="name">${a.name}</h5>
     
-    <a href="product-info.html" class="btn btn-primary">Ver más</a>
+    <a href="product-info.html" onclick="setProdID" class="btn btn-primary">Ver más</a>
   </div>
 </div>
 
@@ -151,3 +151,11 @@ document.getElementById("showRelated").innerHTML = htmlContentToAppend
       
               document.getElementById("showComent").innerHTML = htmlContentToAppend;
           }
+
+
+
+          //local storage prod ID, redireccionar a info del producto
+ function setProdID(id) {
+  localStorage.setItem("prodID", id);
+  window.location = "product-info.html";
+}

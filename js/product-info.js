@@ -103,7 +103,7 @@ function showRelated(){
 `
 document.getElementById("showRelated").innerHTML = htmlContentToAppend
 
-}
+}}
 
 
 

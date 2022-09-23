@@ -96,7 +96,7 @@ function showRelated(){
   <div class="card-body">
     <h5 class="name">${a.name}</h5>
     
-    <a href="product-info.html" class="btn btn-primary" style="align: left;">Comprar</a>
+    <a href="product-info.html" class="btn btn-primary">Comprar</a>
   </div>
 </div>
 

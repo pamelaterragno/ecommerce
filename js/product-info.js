@@ -99,7 +99,7 @@ function showRelated(){
     <a href="product-info.html" class="btn btn-primary">Comprar</a>
   </div>
 </div>
-}
+
 `
 document.getElementById("showRelated").innerHTML = htmlContentToAppend
 

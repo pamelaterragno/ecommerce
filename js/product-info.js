@@ -86,13 +86,16 @@ function showArrayProd(){
 
 function showRelated(){
   let htmlContentToAppend="";
+
+  for(let i = 0; i < infoProductsArray.length; i++){
+    let a = infoProductsArray[i];
   htmlContentToAppend+=`
   
   
   <div class="card" style="width: 18rem;">
-  <img src="${infoProductsArray.relatedProducts.image}" class="card-img-top" alt="...">
+  <img src="${a.relatedProducts.image}" class="card-img-top" alt="...">
   <div class="card-body">
-    <h5 class="${infoProductsArray.relatedProducts.name}">${infoProductsArray.relatedProducts.name}</h5>
+    <h5 class="${a.relatedProducts.name}">${a.relatedProducts.name}</h5>
     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
     <a href="product-info.html" class="btn btn-primary">Comprar</a>
   </div>
@@ -101,7 +104,7 @@ function showRelated(){
 `
 document.getElementById("showRelated").innerHTML = htmlContentToAppend
 
-}
+}}
 
 
 

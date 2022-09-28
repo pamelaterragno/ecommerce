@@ -51,6 +51,9 @@ function showArrayProd(){
                   <div id="carouselExampleControls" class="carousel carousel-dark slide" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
+
+
+    
       <img src="${infoProductsArray.images[0]}" class="d-block w-100" alt="first image">
     </div>
     <div class="carousel-item">
@@ -91,7 +94,7 @@ function showRelated(){
   htmlContentToAppend+=`
   
   
-  <div class="card" style="width: 35%;">
+  <div class="card" class="p-2 bd-highlight" style="width: 35%;">
   <img src="${a.image}" class="card-img-top" alt="${a.name}">
   <div class="card-body">
     <h5 class="name">${a.name}</h5>

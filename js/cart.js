@@ -28,6 +28,6 @@ htmlContentToAppend+= `
 
 
 `
-
+}
 document.getElementById("showCarrito").innerHTML = htmlContentToAppend
-   }};
+   };

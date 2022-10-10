@@ -29,5 +29,5 @@ htmlContentToAppend+= `
 
 `
 
-document.getElementById("showCart").innerHTML = htmlContentToAppend
+document.getElementById("showCarrito").innerHTML = htmlContentToAppend
    }}

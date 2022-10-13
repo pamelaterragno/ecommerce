@@ -56,9 +56,12 @@
         <h4 class="alert-heading">Funcionalidad en desarrollo</h4>
       </div> -->
     </div>
-
+<br>
+<br>
+<br>
       <div id="shippingMethod">
         <form>
+          <div class="container">
           <div class="row">
             <h2>Realizar envío</h2>
             <h3>Dirección de envío</h3>
@@ -69,9 +72,9 @@
 
 
             <div class="col">
-              <label class="visually-hidden" for="specificSizeSelect">Departamento</label>
+              <label for="Departamento" class="form-label">Departamento</label>
               <select class="form-select" id="Departamento">
-                <option selected>Departamento</option>
+                <option selected>Seleccione uno</option>
                 <option value="Artigas">Artigas</option>
                 <option value="Canelones">Canelones</option>
                 <option value="Cerro Largo">Cerro Largo</option>
@@ -95,7 +98,7 @@
             </div>
 
 
-
+          </div>
          <div class="row">
 <div class="col">
               <label for="esquina" class="form-label">Esquina</label>
@@ -110,11 +113,16 @@
       </div>
     </div>
   
-          </div>
-
           
+        </div>
+        <br>
+        <br>
+          <div class="container">
+
           <div class="mb-3 form-check">
             <h3>Tipo de envío</h3>
+            <div class="row">
+              <div class="col">
             <input type="radio" id="premium" name="shipping" value="premium" aria-describedby="descriptionPremium">
             <label for="premium">Premium</label>
             <div id="descriptionPremium" class="form-text">Envío en 2 a 5 días (15%)</div>
@@ -128,10 +136,14 @@
             <div id="descriptionStandard" class="form-text">Envío en 12 a 15 días (5%)</div>
             <br>
           </div>
-          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+        <div class="col">
+          <button type="submit" class="btn btn-primary">Confirmar</button>
+        </div>
         </form>
       </div>
-   
+    </div>
+  </div>
   </main>
   <footer class="text-muted">
     <div class="container">

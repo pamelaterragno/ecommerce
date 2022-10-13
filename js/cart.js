@@ -17,15 +17,20 @@ for(let i = 0; i < infoUserExapmle.articles.length; i++){
 
 htmlContentToAppend+= `
 
-<div class="card" style="width: 20%;">
-  <img src="${a.image}" class="card-img-top" alt="${a.name}">
-  <div class="card-body">
-    <h5 class="name">${a.name}</h5>
-    
-    <a href="product-info.html" onclick="setProdID(${a.id})" class="btn btn-primary">Ver más</a>
-  </div>
-</div>
 
+<div class="row border-top border-bottom">
+<div class="row main align-items-center">
+    <div class="col-2"><img class="img-fluid" src="${a.image}"></div>
+    <div class="col">
+        <div class="row text-muted">${a.name}</div>
+        <div class="row">${a.unitCost} ${a.currency} </div>
+    </div>
+    <div class="col">
+        <a href="#">-</a><a href="#" class="border">1</a><a href="#">+</a>
+    </div>
+    <div class="col">&euro; 44.00 <span class="close">&#10005;</span></div>
+</div>
+</div>
 
 `
 }

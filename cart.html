@@ -51,10 +51,36 @@
     </div>
   </nav>
   <main>
-    <div class="showCarrito">
+    <div id="showCarrito">
       <!-- <div class="alert alert-danger text-center" role="alert">
         <h4 class="alert-heading">Funcionalidad en desarrollo</h4>
       </div> -->
+
+
+      <div id="shippingMethod">
+        <form>
+          <div class="mb-3">
+            <h2>Realizar envío</h2>
+            <h3>Dirección de envío</h3>
+            <label for="calle" class="form-label">Calle</label>
+            <input type="text" class="form-control" id="inputcalle">
+          </div>
+          <div class="mb-3">
+            <label for="esquina" class="form-label">Esquina</label>
+            <input type="text" class="form-control" id="inputesquina">
+          </div>
+          <div class="mb-3 form-check">
+            <h3>Tipo de envío</h3>
+            <input type="radio" id="premium" name="shipping" value="premium">
+            <label for="premium">Premium</label><br>
+            <input type="radio" id="express" name="shipping" value="express">
+            <label for="express">Express</label><br>
+            <input type="radio" id="standard" name="shipping" value="standard">
+            <label for="standard">Standard</label>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
     </div>
   </main>
   <footer class="text-muted">

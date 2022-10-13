@@ -59,24 +59,74 @@
 
       <div id="shippingMethod">
         <form>
-          <div class="mb-3">
+          <div class="row">
             <h2>Realizar envío</h2>
             <h3>Dirección de envío</h3>
+          <div class="col">
             <label for="calle" class="form-label">Calle</label>
             <input type="text" class="form-control" id="inputcalle">
           </div>
-          <div class="mb-3">
-            <label for="esquina" class="form-label">Esquina</label>
-            <input type="text" class="form-control" id="inputesquina">
+
+
+            <div class="col">
+              <label class="visually-hidden" for="specificSizeSelect">Departamento</label>
+              <select class="form-select" id="Departamento">
+                <option selected>Departamento</option>
+                <option value="Artigas">Artigas</option>
+                <option value="Canelones">Canelones</option>
+                <option value="Cerro Largo">Cerro Largo</option>
+                <option value="Colonia">Colonia</option>
+                <option value="Durazno">Durazno</option>
+                <option value="Flores">Flores</option>
+                <option value="Florida">Florida</option>
+                <option value="Lavalleja">Lavalleja</option>
+                <option value="Maldonado">Maldonado</option>
+                <option value="Montevideo">Montevideo</option>
+                <option value="Paysandú">Paysandú</option>
+                <option value="Río Negro">Río Negro</option>
+                <option value="Rivera">Rivera</option>
+                <option value="Rocha">Rocha</option>
+                <option value="Salto">Salto</option>
+                <option value="San José">San José</option>
+                <option value="Soriano">Soriano</option>
+                <option value="Tacuarembó">Tacuarembó</option>
+                <option value="Treinta y Tres">Treinta y Tres</option>
+              </select>
+            </div>
+
+
+
+         <div class="row">
+<div class="col">
+              <label for="esquina" class="form-label">Esquina</label>
+              <input type="text" class="form-control" id="inputesquina">
+          
+            </div>
+            
+            <div class="col">
+            <label for="nroPuerta" class="form-label">Número de puerta</label>
+            <input type="text" class="form-control" id="inputNroPuerta">
+        
+      </div>
+    </div>
+  
           </div>
+
+          
           <div class="mb-3 form-check">
             <h3>Tipo de envío</h3>
-            <input type="radio" id="premium" name="shipping" value="premium">
-            <label for="premium">Premium</label><br>
-            <input type="radio" id="express" name="shipping" value="express">
-            <label for="express">Express</label><br>
-            <input type="radio" id="standard" name="shipping" value="standard">
+            <input type="radio" id="premium" name="shipping" value="premium" aria-describedby="descriptionPremium">
+            <label for="premium">Premium</label>
+            <div id="descriptionPremium" class="form-text">Envío en 2 a 5 días (15%)</div>
+            <br>
+            <input type="radio" id="express" name="shipping" value="express" aria-describedby="descriptionExpress">
+            <label for="express">Express</label>
+            <div id="descriptionExpress" class="form-text">Envío en 5 a 8 días (7%)</div>
+            <br>
+            <input type="radio" id="standard" name="shipping" value="standard" aria-describedby="descriptionStandard">
             <label for="standard">Standard</label>
+            <div id="descriptionStandard" class="form-text">Envío en 12 a 15 días (5%)</div>
+            <br>
           </div>
           <button type="submit" class="btn btn-primary">Submit</button>
         </form>

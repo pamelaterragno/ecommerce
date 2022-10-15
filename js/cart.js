@@ -4,7 +4,9 @@ document.addEventListener("DOMContentLoaded", function (e) {
     getJSONData(INFO_USER).then(function (resultObj) {
         if (resultObj.status === "ok") {
             infoUserExapmle = resultObj.data
-            showCart()
+            showCart();
+            document.getElementById("cantidad").oninput = calcSubTotal();
+            console.log(calcSubTotal())
         }
     })
 });
@@ -19,7 +21,7 @@ function showCart() {
         console.log(a.unitCost, a.count)
         console.log(a.unitCost * a.count)
 
-        localStorage.setItem("subtotal", a.unitCost * a.count)
+
 
         htmlContentToAppend += `
 
@@ -42,11 +44,11 @@ function showCart() {
                         
                     </div>                    
                 </div>
-                <div class="pl-md-0 pl-1"><b>${a.currency} ${a.unitCost}</b></div>
+                <div class="pl-md-0 pl-1 d-flex justify-content-evenly" >${a.currency} <div id="cost" >${a.unitCost}</div></div>
                 <div class="pl-md-0 pl-2">
                     <input size="1" id="cantidad" class="px-md-1 px-1"  value="${a.count}">
                 </div>
-                <div class="pl-md-0 pl-1"><b>${a.currency}${localStorage.getItem("subtotal")}</b></div>
+                <div class="pl-md-0 pl-1 d-flex justify-content-evenly">${a.currency}<div id="showSubtotal"></div></div>
                 <div class="close">&times;</div>
             </div>
            
@@ -56,12 +58,22 @@ function showCart() {
 </div>
 </div>
 `
-        
- 
+
+
 
     }
 
     document.getElementById("showCarrito").innerHTML = htmlContentToAppend
 };
+
+
+function calcSubTotal() {
+    let cantidadArt = parseInt(document.getElementById("cantidad").value);
+    let costo = parseInt(document.getElementById("cost").innerHTML);
+    let showSubtotalInCart = document.getElementById("showSubtotal");
+
+return cantidadArt * costo;
+
+}
 
 

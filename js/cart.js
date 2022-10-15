@@ -16,11 +16,6 @@ function showCart() {
     for (let i = 0; i < infoUserExapmle.articles.length; i++) {
         let a = infoUserExapmle.articles[i];
 
-        console.log(a.unitCost, a.count)
-        console.log(a.unitCost * a.count)
-
-        localStorage.setItem("subtotal", a.unitCost * a.count)
-
         htmlContentToAppend += `
 
 <div class="container">
@@ -44,9 +39,9 @@ function showCart() {
                 </div>
                 <div class="pl-md-0 pl-1"><b>${a.currency} ${a.unitCost}</b></div>
                 <div class="pl-md-0 pl-2">
-                    <input size="1" id="cantidad" class="px-md-1 px-1"  value="${a.count}">
+                    <span class="fa fa text-secondary"></span><input size="1" id="cantidad" class="px-md-1 px-1"  value="${a.count}"></span><span class="fa fa text-secondary"></span>
                 </div>
-                <div class="pl-md-0 pl-1"><b>${a.currency}${localStorage.getItem("subtotal")}</b></div>
+                <div class="pl-md-0 pl-1"><b>${a.currency} ${a.unitCost}</b></div>
                 <div class="close">&times;</div>
             </div>
            
@@ -56,8 +51,10 @@ function showCart() {
 </div>
 </div>
 `
-        
- 
+        console.log(a.unitCost, a.count)
+        console.log(a.unitCost * a.count)
+
+
 
     }
 

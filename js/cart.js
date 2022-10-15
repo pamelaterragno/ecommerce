@@ -72,7 +72,7 @@ function calcSubTotal() {
     let costo = parseInt(document.getElementById("cost").innerHTML);
     let showSubtotalInCart = document.getElementById("showSubtotal");
 
-return showSubtotalInCart = cantidadArt * costo;
+return showSubtotalInCart.innerHTML = cantidadArt * costo;
 
 }
 

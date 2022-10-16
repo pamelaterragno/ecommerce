@@ -1,12 +1,12 @@
 const INFO_USER = CART_INFO_URL + "25801" + EXT_TYPE;
 
+
 document.addEventListener("DOMContentLoaded", function (e) {
     getJSONData(INFO_USER).then(function (resultObj) {
         if (resultObj.status === "ok") {
             infoUserExapmle = resultObj.data
             showCart();
-            document.getElementById("cantidad").oninput = calcSubTotal();
-            console.log(calcSubTotal())
+            console.log(calcSubtotal());
         }
     })
 });
@@ -67,13 +67,14 @@ function showCart() {
 };
 
 
-function calcSubTotal() {
+function calcSubtotal() {
     let cantidadArt = parseInt(document.getElementById("cantidad").value);
     let costo = parseInt(document.getElementById("cost").innerHTML);
-    let showSubtotalInCart = document.getElementById("showSubtotal");
-
-return showSubtotalInCart.innerHTML = cantidadArt * costo;
-
+ 
+        return cantidadArt * costo;
+    
 }
 
 
+let showSubtotalInCart = document.getElementById("showSubtotal").innerText;
+showSubtotalInCart = calcSubtotal();

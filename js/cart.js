@@ -6,7 +6,6 @@ document.addEventListener("DOMContentLoaded", function (e) {
         if (resultObj.status === "ok") {
             infoUserExapmle = resultObj.data
             showCart();
-            console.log(calcSubtotal());
         }
     })
 });
@@ -74,7 +73,3 @@ function calcSubtotal() {
         return cantidadArt * costo;
     
 }
-
-
-let showSubtotalInCart = document.getElementById("showSubtotal").innerText;
-showSubtotalInCart = calcSubtotal();

@@ -6,10 +6,12 @@ document.addEventListener("DOMContentLoaded", function (e) {
         if (resultObj.status === "ok") {
             infoUserExapmle = resultObj.data
             showCart();
+            totalPrice();
         }
-    })
+    }) 
 });
 
+// show cart esta pensado para array de prodcutos, en este caso solamente tenemos un ejemplo en particular
 
 function showCart() {
     let htmlContentToAppend = "";
@@ -17,8 +19,8 @@ function showCart() {
     for (let i = 0; i < infoUserExapmle.articles.length; i++) {
         let a = infoUserExapmle.articles[i];
 
-        console.log(a.unitCost, a.count)
-        console.log(a.unitCost * a.count)
+        // console.log(a.unitCost, a.count)
+        // console.log(a.unitCost * a.count)
 
 
 
@@ -45,8 +47,9 @@ function showCart() {
                 </div>
                 <div class="pl-md-0 pl-1 d-flex justify-content-evenly" >${a.currency} <div id="cost" >${a.unitCost}</div></div>
                 <div class="pl-md-0 pl-2">
-                    <input size="1" id="cantidad" class="px-md-1 px-1"  value="${a.count}">
+                    <input size="1" id="cantidad" class="px-md-1 px-1 form-control" oninput="totalPrice()" value="${a.count}"  type="number" name="costinput"  min="0" >
                 </div>
+                
                 <div class="pl-md-0 pl-1 d-flex justify-content-evenly">${a.currency}<div id="showSubtotal"></div></div>
                 <div class="close">&times;</div>
             </div>
@@ -66,10 +69,25 @@ function showCart() {
 };
 
 
-function calcSubtotal() {
-    let cantidadArt = parseInt(document.getElementById("cantidad").value);
-    let costo = parseInt(document.getElementById("cost").innerHTML);
+// function calcSubtotal() {
+//     let cantidadArt = parseInt(document.getElementById("cantidad").value);
+//     let costo = parseInt(document.getElementById("cost").innerHTML);
  
-        return cantidadArt * costo;
+//         return cantidadArt * costo;
     
-}
+// }
+
+
+
+function totalPrice() {
+    const cantidadUni = document.getElementById("cantidad").value;
+    const costo = document.getElementById("cost").innerHTML;
+    const carritosubtotal = document.getElementById("showSubtotal");
+
+        console.log(costo)
+        console.log(cantidadUni)
+
+return carritosubtotal.innerHTML = cantidadUni*costo;
+
+} ;
+

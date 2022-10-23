@@ -60,100 +60,162 @@
 
       </div>
     </div>
-    <div id="showCarrito">
-      <!-- <div class="alert alert-danger text-center" role="alert">
-        <h4 class="alert-heading">Funcionalidad en desarrollo</h4>
-      </div> -->
-    </div>
-    <br>
-    <br>
-    <br>
-    <div id="shippingMethod">
-      <form>
+
+
+
+    <div class="container">
+
+      <div class="d-flex flex-row justify-content-between align-items-center pt-lg-4 pt-2 pb-3 border-bottom mobile"
+        id="heading">
+        <div></div>
+        <div class="px-lg-5 mr-lg-5" id="product">Producto</div>
+        <div class="px-lg-5 ml-lg-5" id="price">Precio</div>
+        <div class="px-lg-5 ml-lg-1" id="quantity">Cantidad</div>
+        <div class="px-lg-5 ml-lg-3" id="subtotal">Subtotal</div>
+      </div>
+      <div id="showCarrito">
+
+      </div>
+
+
+
+
+      <br>
+      <br>
+      <br>
+      <div id="shippingMethod">
+
         <div class="container">
           <div class="row">
-            <h2>Realizar envío</h2>
-            <h3>Dirección de envío</h3>
-            <div class="col">
-              <label for="calle" class="form-label">Calle</label>
-              <input type="text" class="form-control" id="inputcalle">
-            </div>
+            <div class="col-8">
+              <form>
+                <div class="row">
+                  <div class="row">
+                    <h2>Realizar envío</h2>
+                  </div>
+                  <h3>Dirección de envío</h3>
+                  <div class="col">
+                    <label for="calle" class="form-label">Calle</label>
+                    <input type="text" class="form-control" id="inputcalle">
+                  </div>
 
 
-            <div class="col">
-              <label for="Departamento" class="form-label">Departamento</label>
-              <select class="form-select" id="Departamento">
-                <option selected>Seleccione uno</option>
-                <option value="Artigas">Artigas</option>
-                <option value="Canelones">Canelones</option>
-                <option value="Cerro Largo">Cerro Largo</option>
-                <option value="Colonia">Colonia</option>
-                <option value="Durazno">Durazno</option>
-                <option value="Flores">Flores</option>
-                <option value="Florida">Florida</option>
-                <option value="Lavalleja">Lavalleja</option>
-                <option value="Maldonado">Maldonado</option>
-                <option value="Montevideo">Montevideo</option>
-                <option value="Paysandú">Paysandú</option>
-                <option value="Río Negro">Río Negro</option>
-                <option value="Rivera">Rivera</option>
-                <option value="Rocha">Rocha</option>
-                <option value="Salto">Salto</option>
-                <option value="San José">San José</option>
-                <option value="Soriano">Soriano</option>
-                <option value="Tacuarembó">Tacuarembó</option>
-                <option value="Treinta y Tres">Treinta y Tres</option>
-              </select>
-            </div>
+                  <div class="col">
+                    <label for="Departamento" class="form-label">Departamento</label>
+                    <select class="form-select" id="Departamento">
+                      <option selected>Seleccione uno</option>
+                      <option value="Artigas">Artigas</option>
+                      <option value="Canelones">Canelones</option>
+                      <option value="Cerro Largo">Cerro Largo</option>
+                      <option value="Colonia">Colonia</option>
+                      <option value="Durazno">Durazno</option>
+                      <option value="Flores">Flores</option>
+                      <option value="Florida">Florida</option>
+                      <option value="Lavalleja">Lavalleja</option>
+                      <option value="Maldonado">Maldonado</option>
+                      <option value="Montevideo">Montevideo</option>
+                      <option value="Paysandú">Paysandú</option>
+                      <option value="Río Negro">Río Negro</option>
+                      <option value="Rivera">Rivera</option>
+                      <option value="Rocha">Rocha</option>
+                      <option value="Salto">Salto</option>
+                      <option value="San José">San José</option>
+                      <option value="Soriano">Soriano</option>
+                      <option value="Tacuarembó">Tacuarembó</option>
+                      <option value="Treinta y Tres">Treinta y Tres</option>
+                    </select>
+                  </div>
 
 
-          </div>
-          <br>
-          <div class="row">
-            <div class="col">
-              <label for="esquina" class="form-label">Esquina</label>
-              <input type="text" class="form-control" id="inputesquina">
-
-            </div>
-
-            <div class="col">
-              <label for="nroPuerta" class="form-label">Número de puerta</label>
-              <input type="text" class="form-control" id="inputNroPuerta">
-
-            </div>
-          </div>
-
-
-        </div>
-        <br>
-        <br>
-        <div class="container">
-
-          <div class="mb-3 form-check">
-            <h3>Tipo de envío</h3>
-            <div class="row">
-              <div class="col">
-                <input type="radio" id="premium" name="shipping" value="premium" aria-describedby="descriptionPremium">
-                <label for="premium">Premium</label>
-                <div id="descriptionPremium" class="form-text">Envío en 2 a 5 días (15%)</div>
+                </div>
                 <br>
-                <input type="radio" id="express" name="shipping" value="express" aria-describedby="descriptionExpress">
-                <label for="express">Express</label>
-                <div id="descriptionExpress" class="form-text">Envío en 5 a 8 días (7%)</div>
-                <br>
-                <input type="radio" id="standard" name="shipping" value="standard"
-                  aria-describedby="descriptionStandard">
-                <label for="standard">Standard</label>
-                <div id="descriptionStandard" class="form-text">Envío en 12 a 15 días (5%)</div>
-                <br>
+                <div class="row">
+                  <div class="col">
+                    <label for="esquina" class="form-label">Esquina</label>
+                    <input type="text" class="form-control" id="inputesquina">
+
+                  </div>
+
+                  <div class="col">
+                    <label for="nroPuerta" class="form-label">Número de puerta</label>
+                    <input type="text" class="form-control" id="inputNroPuerta">
+
+                  </div>
+                </div>
+
+              </form>
+            </div>
+
+
+
+            <div class="col-3 d-flex justify-content-end">
+              <div class="form-check">
+
+                <h3>Tipo de envío</h3>
+                <form>
+                  <div class="row">
+                    <div class="col">
+                      <input type="radio" id="premium" name="shipping" value="premium"
+                        aria-describedby="descriptionPremium">
+                      <label for="premium">Premium</label>
+                      <div id="descriptionPremium" class="form-text">Envío en 2 a 5 días (15%)</div>
+                      <br>
+                      <input type="radio" id="express" name="shipping" value="express"
+                        aria-describedby="descriptionExpress">
+                      <label for="express">Express</label>
+                      <div id="descriptionExpress" class="form-text">Envío en 5 a 8 días (7%)</div>
+                      <br>
+                      <input type="radio" id="standard" name="shipping" value="standard"
+                        aria-describedby="descriptionStandard">
+                      <label for="standard">Standard</label>
+                      <div id="descriptionStandard" class="form-text">Envío en 12 a 15 días (5%)</div>
+                      <br>
+                    </div>
+                  </div>
+                </form>
               </div>
             </div>
-            <div class="col">
-              <button type="submit" class="btn btn-primary">Confirmar</button>
-            </div>
-      </form>
-    </div>
-    </div>
+          </div>
+          <br>
+          <br>
+          <div id="showCosto">
+
+            <h3>Costo</h3>
+            <table class="table table-hover row">
+              <tbody>
+                <tr>
+                  <th scope="row">Subtotal</th>
+                  <!-- Costo unitario del producto por cantidad -->
+                  <td id="SHOWSUBTOTAL">12500</td>
+                  <!--DIV PARA MOSTRAR MONTO SUBTOTAL-->
+                </tr>
+                <tr>
+                  <th scope="row">Costo de envío</th>
+                  <td id="SHOWCOSTO">600</td> <!-- DIV PARA MOSTRAR COSTO DE ENVIO-->
+                </tr>
+              </tbody>
+
+              <tfoot>
+                <tr>
+                  <th scope="row">Total ($)</th>
+                  <td id="SHOWTOTAL" class="justify-content-end"> 2500</td>
+                  <!--DIV PARA MSOTRAR SUMA-->
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+
+        </div>
+        <div class="col d-flex justify-content-end">
+          <button type="submit" class="btn btn-primary">Confirmar</button>
+        </div>
+        </form>
+
+
+
+
+
+      </div>
     </div>
   </main>
   <footer class="text-muted">

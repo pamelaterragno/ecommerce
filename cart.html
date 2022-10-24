@@ -209,10 +209,73 @@
 
 <div id="formadepago">
 <h3>Forma de pago</h3>
-<button type="submit" class="btn btn-secondary">Elegir</button>
+<button type="submit" class="btn btn-secondary"  data-bs-toggle="modal" data-bs-target="#MODALFDEPAGO">Elegir</button>
 
 
 </div>
+
+<!--MODAL-->
+
+<div class="modal fade" id="MODALFDEPAGO" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="MODALFDEPAGO" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Seleccionar forma de pago</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+
+<form>
+        <input type="radio" id="Tdecredito"  name="Fdepago" value="Tdecredito" data-bs-toggle="collapse" data-bs-target="#collapseTdecredito" aria-expanded="false" aria-controls="collapseTdecredito">
+  <label for="Tdecredito">Tarjeta de crédito</label><br>
+
+  <div class="collapse" id="collapseTdecredito">
+    <div class="card card-body">
+      <label>Número de tarjeta</label>
+      <input type="text" class="form-control" id="nroTarjeta">
+      <label>Código de seguridad (CVV)</label>
+      <input type="text" class="form-control" id="codTarjeta">
+      <label>Vencimiento (mm/aa)</label>
+      <input type="text" class="form-control" id="venTarjeta">
+    </div>
+  </div>
+
+
+<br>
+  <input type="radio" id="Transferencia" name="Fdepago" value="Transferencia"  data-bs-toggle="collapse" data-bs-target="#collapseTransferencia" aria-expanded="false" aria-controls="collapseTransferencia">
+      <label for="Transferencia">Transferencia bancaria</label><br>
+      <div class="collapse" id="collapseTransferencia">
+        <div class="card card-body">
+          <label>Número de cuenta </label>
+          <input type="text" class="form-control" id="nroDeCuenta">
+        
+        </div>
+      </div>
+
+    </form>
+      </div>
+
+      
+          
+
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+       
+      </div>
+    </div>
+    </div>
+  </div>
+</div>
+
+<!--FINAL MODAL-->
+
+
+
+
+
+
+
 <br>
 <br>
 <div class="d-grid gap-2">
@@ -232,6 +295,11 @@
       </div>
     </div>
   </main>
+
+
+
+
+
   <footer class="text-muted">
     <div class="container">
       <p class="float-end">

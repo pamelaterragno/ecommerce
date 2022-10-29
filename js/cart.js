@@ -106,15 +106,19 @@ function totalPriceWShipping() {
     };
 
 
+
+
+    
+
     function disableModalOptions() {
 
 
         const InputTarjeta = document.getElementById("Tdecredito"); // INPUT CHECKBOX
         const InputTransferencia = document.getElementById("Transferencia"); // INPUT CHECKBOX
 
-        const nroTarjeta = document.getElementById("nroTarjeta"); //input de tarjeta para disabled
-        const codTarjeta = document.getElementById("codTarjeta"); //input de tarjeta para disabled
-        const venTarjeta = document.getElementById("venTarjeta"); //input de tarjeta para disabled
+        const nroTarjeta = document.getElementById("nroTarjeta"); //input de tarjeta
+        const codTarjeta = document.getElementById("codTarjeta"); //input de tarjeta
+        const venTarjeta = document.getElementById("venTarjeta"); //input de tarjeta
 
         const nroDeCuenta = document.getElementById("nroDeCuenta"); //input de transferencia
 

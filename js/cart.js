@@ -7,8 +7,10 @@ document.addEventListener("DOMContentLoaded", function (e) {
             infoUserExapmle = resultObj.data
             showCart();
             totalPrice();
-        }
-    })
+            totalPriceWShipping();
+           
+        } 
+    })  
 });
 
 // show cart esta pensado para array de prodcutos, en este caso solamente tenemos un ejemplo en particular
@@ -54,27 +56,83 @@ function showCart() {
 };
 
 
-// function calcSubtotal() {
-//     let cantidadArt = parseInt(document.getElementById("cantidad").value);
-//     let costo = parseInt(document.getElementById("cost").innerHTML);
-
-//         return cantidadArt * costo;
-
-// }
 
 
 
 function totalPrice() {
-    const cantidadUni = document.getElementById("cantidad").value;
+    const cantidadUni = document.getElementById("cantidad");
     const costo = document.getElementById("cost").innerHTML;
     const carritosubtotal = document.getElementById("showSubtotal");
 
     console.log(costo)
     console.log(cantidadUni)
+   
+    totalPriceWShipping()
 
-    return carritosubtotal.innerHTML = cantidadUni * costo;
-
+    return carritosubtotal.innerHTML = cantidadUni.value * costo;
 };
 
 
 
+
+
+function totalPriceWShipping() {
+    
+    const premium = document.getElementById("premium"); //RADIO OPTION w/ON CLICK
+    const express = document.getElementById("express"); //RADIO OPTION w/ON CLICK
+    const standard = document.getElementById("standard"); //RADIO OPTION w/ON CLICK
+
+    const showTotal = document.getElementById("SHOWTOTAL"); //CONTAINER TO SHOW TOTAL PRICE W SHIPPING
+    const showPriceXQuantity = document.getElementById("SHOWSUBTOTAL"); // CONTAINER TO SHOW VALUE ARTICLE
+    const showPriceShipping = document.getElementById("SHOWCOSTOENVIO"); // CONTAINER TO SHOW PRICE SHIPPING
+
+    const subtotalQxU = document.getElementById("showSubtotal").innerText; // VALUE THAT IS MODIFY WITH QUANTITY X UNI w/totalPrice() 
+
+
+
+    showPriceXQuantity.innerHTML = subtotalQxU; //show in subtotal table uni x quantity in cart
+
+    
+    if (premium.checked) {
+        showPriceShipping.innerHTML = Math.round(subtotalQxU*0.15)  
+      } else if (express.checked) {
+        showPriceShipping.innerHTML =  Math.round(subtotalQxU*0.7)
+      } else if (standard.checked) {
+        showPriceShipping.innerHTML =  Math.round(subtotalQxU*0.05)
+      }
+
+     return showTotal.innerHTML = parseFloat(subtotalQxU) + parseFloat(showPriceShipping.innerText);
+
+    };
+
+
+    function disableModalOptions() {
+
+
+        const InputTarjeta = document.getElementById("Tdecredito"); // INPUT CHECKBOX
+        const InputTransferencia = document.getElementById("Transferencia"); // INPUT CHECKBOX
+
+        const nroTarjeta = document.getElementById("nroTarjeta"); //input de tarjeta para disabled
+        const codTarjeta = document.getElementById("codTarjeta"); //input de tarjeta para disabled
+        const venTarjeta = document.getElementById("venTarjeta"); //input de tarjeta para disabled
+
+        const nroDeCuenta = document.getElementById("nroDeCuenta"); //input de transferencia
+
+
+    if (InputTarjeta.checked) {
+        nroTarjeta.disabled = false
+        codTarjeta.disabled = false
+        venTarjeta.disabled = false
+        nroDeCuenta.disabled = true
+    } else if (InputTransferencia.checked) {
+        nroTarjeta.disabled = true
+        codTarjeta.disabled = true
+        venTarjeta.disabled = true
+        nroDeCuenta.disabled = false
+    }
+
+    }
+
+document.getElementById("MODALFDEPAGO").addEventListener("click", function(e){
+    disableModalOptions();
+});

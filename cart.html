@@ -155,18 +155,15 @@
                 <form>
                   <div class="row">
                     <div class="col">
-                      <input type="radio" id="premium" name="shipping" value="premium"
-                        aria-describedby="descriptionPremium">
+                      <input type="radio" id="premium" name="shipping" value="premium" aria-describedby="descriptionPremium" checked onclick="totalPriceWShipping()">
                       <label for="premium">Premium</label>
                       <div id="descriptionPremium" class="form-text">Envío en 2 a 5 días (15%)</div>
                       <br>
-                      <input type="radio" id="express" name="shipping" value="express"
-                        aria-describedby="descriptionExpress">
+                      <input type="radio" id="express" name="shipping" value="express" aria-describedby="descriptionExpress" onclick="totalPriceWShipping()">
                       <label for="express">Express</label>
                       <div id="descriptionExpress" class="form-text">Envío en 5 a 8 días (7%)</div>
                       <br>
-                      <input type="radio" id="standard" name="shipping" value="standard"
-                        aria-describedby="descriptionStandard">
+                      <input type="radio" id="standard" name="shipping" value="standard" aria-describedby="descriptionStandard" onclick="totalPriceWShipping()">
                       <label for="standard">Standard</label>
                       <div id="descriptionStandard" class="form-text">Envío en 12 a 15 días (5%)</div>
                       <br>
@@ -186,19 +183,19 @@
                 <tr>
                   <th scope="row">Subtotal</th>
                   <!-- Costo unitario del producto por cantidad -->
-                  <td id="SHOWSUBTOTAL">12500</td>
+                  <td id="SHOWSUBTOTAL"></td>
                   <!--DIV PARA MOSTRAR MONTO SUBTOTAL-->
                 </tr>
                 <tr>
                   <th scope="row">Costo de envío</th>
-                  <td id="SHOWCOSTO">600</td> <!-- DIV PARA MOSTRAR COSTO DE ENVIO-->
+                  <td id="SHOWCOSTOENVIO"></td> <!-- DIV PARA MOSTRAR COSTO DE ENVIO-->
                 </tr>
               </tbody>
 
               <tfoot>
                 <tr>
                   <th scope="row">Total ($)</th>
-                  <td id="SHOWTOTAL" class="justify-content-end"> 2500</td>
+                  <td id="SHOWTOTAL" class="justify-content-end"></td>
                   <!--DIV PARA MSOTRAR SUMA-->
                 </tr>
               </tfoot>
@@ -234,7 +231,7 @@
       <label>Número de tarjeta</label>
       <input type="text" class="form-control" id="nroTarjeta">
       <label>Código de seguridad (CVV)</label>
-      <input type="text" class="form-control" id="codTarjeta">
+      <input type="text" class="form-control" id="codTarjeta"> 
       <label>Vencimiento (mm/aa)</label>
       <input type="text" class="form-control" id="venTarjeta">
     </div>
@@ -260,7 +257,7 @@
 
 
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Guardar</button>
        
       </div>
     </div>

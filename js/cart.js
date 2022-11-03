@@ -67,9 +67,9 @@ function totalPrice() {
     console.log(costo)
     console.log(cantidadUni)
    
-    totalPriceWShipping()
-
-    return carritosubtotal.innerHTML = cantidadUni.value * costo;
+   
+    carritosubtotal.innerHTML = cantidadUni.value * costo;
+    totalPriceWShipping();
 };
 
 
@@ -101,7 +101,7 @@ function totalPriceWShipping() {
         showPriceShipping.innerHTML =  Math.round(subtotalQxU*0.05)
       }
 
-     return showTotal.innerHTML = parseFloat(subtotalQxU) + parseFloat(showPriceShipping.innerText);
+     showTotal.innerHTML = parseFloat(subtotalQxU) + parseFloat(showPriceShipping.innerText);
 
     };
 

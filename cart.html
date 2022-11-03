@@ -88,7 +88,7 @@
         <div class="container">
           <div class="row">
             <div class="col-8">
-              <form>
+              <form class="needs-validation">
                 <div class="row">
                   <div class="row">
                     <h2>Realizar envío</h2>
@@ -143,7 +143,7 @@
                   </div>
                 </div>
 
-              </form>
+              
             </div>
 
 
@@ -152,7 +152,7 @@
               <div class="form-check">
 
                 <h3>Tipo de envío</h3>
-                <form>
+            
                   <div class="row">
                     <div class="col">
                       <input type="radio" id="premium" name="shipping" value="premium" aria-describedby="descriptionPremium" checked onclick="totalPriceWShipping()">
@@ -169,7 +169,7 @@
                       <br>
                     </div>
                   </div>
-                </form>
+               
               </div>
             </div>
           </div>
@@ -210,7 +210,7 @@
 
 
 </div>
-
+</form>
 <!--MODAL-->
 
 <div class="modal fade" id="MODALFDEPAGO" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="MODALFDEPAGO" aria-hidden="true">
@@ -276,7 +276,7 @@
 <br>
 <br>
 <div class="d-grid gap-2">
-  <button type="submit" class="btn btn-primary">Finalizar compra</button>
+  <button type="submit" class="btn btn-primary" id="buttonSub">Finalizar compra</button>
 </div>
 
 

@@ -1,5 +1,5 @@
 const INFO_USER = CART_INFO_URL + "25801" + EXT_TYPE;
-const BUTTON = document.getElementById("buttonSub");
+
 
 document.addEventListener("DOMContentLoaded", function (e) {
     getJSONData(INFO_USER).then(function (resultObj) {
@@ -44,7 +44,7 @@ function showCart() {
 <input size="1" id="cantidad" class="px-md-1 px-1 form-control" oninput="totalPrice()" value="${a.count}"  type="number" name="costinput"  min="0" >
 </div>
 
-<div class="pl-md-0 pl-1 d-flex justify-content-evenly">${a.currency}<div onchange="totalPriceWShipping()" id="showSubtotal"></div></div>
+<div class="pl-md-0 pl-1 d-flex justify-content-evenly">${a.currency}<div id="showSubtotal"></div></div>
 <div class="close">&times;</div>
 
 
@@ -60,16 +60,16 @@ function showCart() {
 
 
 function totalPrice() {
-    const cantidadUni = document.getElementById("cantidad").value;
+    const cantidadUni = document.getElementById("cantidad");
     const costo = document.getElementById("cost").innerHTML;
     const carritosubtotal = document.getElementById("showSubtotal");
 
     console.log(costo)
     console.log(cantidadUni)
    
+    totalPriceWShipping()
 
-
-    return carritosubtotal.innerHTML = cantidadUni * costo;
+    return carritosubtotal.innerHTML = cantidadUni.value * costo;
 };
 
 
@@ -89,9 +89,10 @@ function totalPriceWShipping() {
     const subtotalQxU = document.getElementById("showSubtotal").innerText; // VALUE THAT IS MODIFY WITH QUANTITY X UNI w/totalPrice() 
 
 
+
     showPriceXQuantity.innerHTML = subtotalQxU; //show in subtotal table uni x quantity in cart
 
-    //when one of them is checked the subtotal is multiplied by the number of the porcentage its represent
+    
     if (premium.checked) {
         showPriceShipping.innerHTML = Math.round(subtotalQxU*0.15)  
       } else if (express.checked) {
@@ -99,8 +100,6 @@ function totalPriceWShipping() {
       } else if (standard.checked) {
         showPriceShipping.innerHTML =  Math.round(subtotalQxU*0.05)
       }
-
-    
 
      return showTotal.innerHTML = parseFloat(subtotalQxU) + parseFloat(showPriceShipping.innerText);
 
@@ -141,42 +140,3 @@ function totalPriceWShipping() {
 document.getElementById("MODALFDEPAGO").addEventListener("click", function(e){
     disableModalOptions();
 });
-
-
-
-
-
-
-
-
-// VALIDATION
-
-
-
-
-BUTTON.addEventListener("click", function(){
-
-    // Example starter JavaScript for disabling form submissions if there are invalid fields
-    (function () {
-        'use strict'
-      
-        // Fetch all the forms we want to apply custom Bootstrap validation styles to
-        var forms = document.querySelectorAll('.needs-validation')
-      
-        // Loop over them and prevent submission
-        Array.prototype.slice.call(forms)
-          .forEach(function (form) {
-            form.addEventListener('submit', function (event) {
-              
-             
-                 if (!form.checkValidity()) {
-                event.preventDefault()
-                event.stopPropagation()
-              }
-        
-              form.classList.add('was-validated')
-            }, false)
-          })
-      })()
-    
-    });

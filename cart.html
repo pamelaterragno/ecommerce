@@ -56,7 +56,8 @@
   <main>
     <div class="container">
       <div class="row">
-        <h2>Mi carrito</h2>
+        <h2 class="mt-5">Mi carrito</h2>
+        <hr class="mt-4">
 
       </div>
     </div>
@@ -143,7 +144,6 @@
                   </div>
                 </div>
 
-              </form>
             </div>
 
 
@@ -152,24 +152,27 @@
               <div class="form-check">
 
                 <h3>Tipo de envío</h3>
-                <form>
-                  <div class="row">
-                    <div class="col">
-                      <input type="radio" id="premium" name="shipping" value="premium" aria-describedby="descriptionPremium" checked onclick="totalPriceWShipping()">
-                      <label for="premium">Premium</label>
-                      <div id="descriptionPremium" class="form-text">Envío en 2 a 5 días (15%)</div>
-                      <br>
-                      <input type="radio" id="express" name="shipping" value="express" aria-describedby="descriptionExpress" onclick="totalPriceWShipping()">
-                      <label for="express">Express</label>
-                      <div id="descriptionExpress" class="form-text">Envío en 5 a 8 días (7%)</div>
-                      <br>
-                      <input type="radio" id="standard" name="shipping" value="standard" aria-describedby="descriptionStandard" onclick="totalPriceWShipping()">
-                      <label for="standard">Standard</label>
-                      <div id="descriptionStandard" class="form-text">Envío en 12 a 15 días (5%)</div>
-                      <br>
-                    </div>
+
+                <div class="row">
+                  <div class="col">
+                    <input type="radio" id="premium" name="shipping" value="premium"
+                      aria-describedby="descriptionPremium" checked onclick="totalPriceWShipping()">
+                    <label for="premium">Premium</label>
+                    <div id="descriptionPremium" class="form-text">Envío en 2 a 5 días (15%)</div>
+                    <br>
+                    <input type="radio" id="express" name="shipping" value="express"
+                      aria-describedby="descriptionExpress" onclick="totalPriceWShipping()">
+                    <label for="express">Express</label>
+                    <div id="descriptionExpress" class="form-text">Envío en 5 a 8 días (7%)</div>
+                    <br>
+                    <input type="radio" id="standard" name="shipping" value="standard"
+                      aria-describedby="descriptionStandard" onclick="totalPriceWShipping()">
+                    <label for="standard">Standard</label>
+                    <div id="descriptionStandard" class="form-text">Envío en 12 a 15 días (5%)</div>
+                    <br>
                   </div>
-                </form>
+                </div>
+
               </div>
             </div>
           </div>
@@ -201,71 +204,75 @@
               </tfoot>
             </table>
           </div>
-         
 
 
-<div id="formadepago">
-<h3>Forma de pago</h3>
-<button type="submit" class="btn btn-secondary"  data-bs-toggle="modal" data-bs-target="#MODALFDEPAGO">Elegir</button>
+
+          <div id="formadepago">
+            <h3>Forma de pago</h3>
+            <button type="submit" class="btn btn-secondary" data-bs-toggle="modal"
+              data-bs-target="#MODALFDEPAGO">Elegir</button>
 
 
-</div>
+          </div>
 
-<!--MODAL-->
+          <!--MODAL-->
 
-<div class="modal fade" id="MODALFDEPAGO" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="MODALFDEPAGO" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="staticBackdropLabel">Seleccionar forma de pago</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-
-<form>
-        <input type="radio" id="Tdecredito"  name="Fdepago" value="Tdecredito" data-bs-toggle="collapse" data-bs-target="#collapseTdecredito" aria-expanded="false" aria-controls="collapseTdecredito">
-  <label for="Tdecredito">Tarjeta de crédito</label><br>
-
-  <div class="collapse" id="collapseTdecredito">
-    <div class="card card-body">
-      <label>Número de tarjeta</label>
-      <input type="text" class="form-control" id="nroTarjeta">
-      <label>Código de seguridad (CVV)</label>
-      <input type="text" class="form-control" id="codTarjeta"> 
-      <label>Vencimiento (mm/aa)</label>
-      <input type="text" class="form-control" id="venTarjeta">
-    </div>
-  </div>
+          <div class="modal fade" id="MODALFDEPAGO" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="MODALFDEPAGO" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="staticBackdropLabel">Seleccionar forma de pago</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
 
 
-<br>
-  <input type="radio" id="Transferencia" name="Fdepago" value="Transferencia"  data-bs-toggle="collapse" data-bs-target="#collapseTransferencia" aria-expanded="false" aria-controls="collapseTransferencia">
-      <label for="Transferencia">Transferencia bancaria</label><br>
-      <div class="collapse" id="collapseTransferencia">
-        <div class="card card-body">
-          <label>Número de cuenta </label>
-          <input type="text" class="form-control" id="nroDeCuenta">
-        
+                  <input type="radio" id="Tdecredito" name="Fdepago" value="Tdecredito" data-bs-toggle="collapse"
+                    data-bs-target="#collapseTdecredito" aria-expanded="false" aria-controls="collapseTdecredito">
+                  <label for="Tdecredito">Tarjeta de crédito</label><br>
+
+                  <div class="collapse" id="collapseTdecredito">
+                    <div class="card card-body">
+                      <label>Número de tarjeta</label>
+                      <input type="text" class="form-control" id="nroTarjeta">
+                      <label>Código de seguridad (CVV)</label>
+                      <input type="text" class="form-control" id="codTarjeta">
+                      <label>Vencimiento (mm/aa)</label>
+                      <input type="text" class="form-control" id="venTarjeta">
+                    </div>
+                  </div>
+
+
+                  <br>
+                  <input type="radio" id="Transferencia" name="Fdepago" value="Transferencia" data-bs-toggle="collapse"
+                    data-bs-target="#collapseTransferencia" aria-expanded="false" aria-controls="collapseTransferencia">
+                  <label for="Transferencia">Transferencia bancaria</label><br>
+                  <div class="collapse" id="collapseTransferencia">
+                    <div class="card card-body">
+                      <label>Número de cuenta </label>
+                      <input type="text" class="form-control" id="nroDeCuenta">
+
+                    </div>
+                  </div>
+
+                  </form>
+                </div>
+
+
+
+
+
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Guardar</button>
+
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
 
-    </form>
-      </div>
-
-      
-          
-
-
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Guardar</button>
-       
-      </div>
-    </div>
-    </div>
-  </div>
-</div>
-
-<!--FINAL MODAL-->
+        <!--FINAL MODAL-->
 
 
 
@@ -273,23 +280,23 @@
 
 
 
-<br>
-<br>
-<div class="d-grid gap-2">
-  <button type="submit" class="btn btn-primary">Finalizar compra</button>
-</div>
-
-
-
+        <br>
+        <br>
+        <div class="d-grid gap-2">
+          <button type="submit" class="btn btn-primary">Finalizar compra</button>
         </div>
-     
-      
-
-
 
 
 
       </div>
+
+
+
+
+
+
+
+    </div>
     </div>
   </main>
 

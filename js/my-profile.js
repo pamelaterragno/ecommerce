@@ -53,12 +53,12 @@ function saveInLocalStorage(){
 //validation of (*) inputs
 function profileValidation(){
  
-  let checkTotal = false;
+  let validateInput = false;
  
-  NAME.value != '' ? (VALID_NAME.className = 'valid-feedback') && (VALID_NAME.textContent = "Está correcto") && (NAME.className = 'form-control is-valid') : (VALID_NAME.className = 'invalid-feedback') && (VALID_NAME.textContent = "Ingresa su nombre") && (NAME.className = 'form-control is-invalid') && (checkTotal = true);
-  SURNAME.value != '' ? (VALID_SURNAME.className = 'valid-feedback') && (VALID_SURNAME.textContent = "Está correcto") && (SURNAME.className = 'form-control is-valid') : (VALID_SURNAME.className = 'invalid-feedback') && (VALID_SURNAME.textContent = "Ingrese su apellido") && (SURNAME.className = 'form-control is-invalid') && (checkTotal = true);
+  NAME.value != '' ? (VALID_NAME.className = 'valid-feedback') && (VALID_NAME.textContent = "Está correcto") && (NAME.className = 'form-control is-valid') : (VALID_NAME.className = 'invalid-feedback') && (VALID_NAME.textContent = "Ingresa su nombre") && (NAME.className = 'form-control is-invalid') && (validateInput = true);
+  SURNAME.value != '' ? (VALID_SURNAME.className = 'valid-feedback') && (VALID_SURNAME.textContent = "Está correcto") && (SURNAME.className = 'form-control is-valid') : (VALID_SURNAME.className = 'invalid-feedback') && (VALID_SURNAME.textContent = "Ingrese su apellido") && (SURNAME.className = 'form-control is-invalid') && (validateInput = true);
   
-  checkTotal ? alert("Debe completar los campos obligatorios") : alert("Los datos se han guardado correctamente");
+  validateInput ? alert("Debe completar los campos obligatorios") : alert("Los datos se han guardado correctamente");
 
 }
 

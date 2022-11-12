@@ -25,20 +25,15 @@ function showCart() {
         // console.log(a.unitCost * a.count)
 
 
-
         htmlContentToAppend += 
         `
         <div class="d-flex flex-row justify-content-between align-items-center pt-lg-4 pt-2 pb-3 border-bottom mobile">
         <div class="d-flex flex-row align-items-center">
-
-<div><img src="${a.image}" width="150"  alt="" id="image" class="me-5"></div>
-<div class="d-flex flex-column pl-md-3 pl-1">
-
-    <div><h3>${a.name}</h3></div>
-   
-    
-</div>                    
-</div>
+            <div><img src="${a.image}" width="150"  alt="" id="image" class="me-5"></div>
+        <div class="d-flex flex-column pl-md-3 pl-1">
+            <div><h3>${a.name}</h3></div>
+            </div>                    
+            </div>
 <div class="pl-md-0 pl-1 d-flex justify-content-evenly" >${a.currency} <div id="cost" >${a.unitCost}</div></div>
 <div class="pl-md-0 pl-2">
 <input size="1" id="cantidad" class="px-md-1 px-1 form-control" oninput="totalPrice()" value="${a.count}"  type="number" name="costinput"  min="0" >
@@ -46,16 +41,10 @@ function showCart() {
 
 <div class="pl-md-0 pl-1 d-flex justify-content-evenly">${a.currency}<div id="showSubtotal"></div></div>
 <div class="close">&times;</div>
-
-
 `
     }
-    
-
     document.getElementById("showCarrito").innerHTML = htmlContentToAppend
 };
-
-
 
 
 
@@ -74,8 +63,6 @@ function totalPrice() {
 
 
 
-
-
 function totalPriceWShipping() {
     
     const premium = document.getElementById("premium"); //RADIO OPTION w/ON CLICK
@@ -87,7 +74,6 @@ function totalPriceWShipping() {
     const showPriceShipping = document.getElementById("SHOWCOSTOENVIO"); // CONTAINER TO SHOW PRICE SHIPPING
 
     const subtotalQxU = document.getElementById("showSubtotal").innerText; // VALUE THAT IS MODIFY WITH QUANTITY X UNI w/totalPrice() 
-
 
 
     showPriceXQuantity.innerHTML = subtotalQxU; //show in subtotal table uni x quantity in cart
@@ -106,12 +92,9 @@ function totalPriceWShipping() {
     };
 
 
-
-
     
 
     function disableModalOptions() {
-
 
         const InputTarjeta = document.getElementById("Tdecredito"); // INPUT CHECKBOX
         const InputTransferencia = document.getElementById("Transferencia"); // INPUT CHECKBOX
@@ -143,22 +126,46 @@ document.getElementById("MODALFDEPAGO").addEventListener("click", function(e){
 
 
 
-(function () {
-    'use strict'
-  
-    // Fetch all the forms we want to apply custom Bootstrap validation styles to
-    var forms = document.querySelectorAll('.needs-validation')
-  
-    // Loop over them and prevent submission
-    Array.prototype.slice.call(forms)
-      .forEach(function (form) {
-        form.addEventListener('submit', function (event) {
-          if (!form.checkValidity()) {
-            event.preventDefault()
-            event.stopPropagation()
-          }
-  
-          form.classList.add('was-validated')
-        }, false)
-      })
-  })()
+// const VALID_STREET = document.getElementById("calleValid");
+// const VALID_CORNER = document.getElementById("esquiValid");
+// const VALID_NUMBER = document.getElementById("nroPuertaValid");
+
+// const IPUT_QUANTITY = document.getElementById("cantidad");
+// const STREET = document.getElementById("inputcalle");
+// const CORNER = document.getElementById("inputesquina");
+// const NUMBER = document.getElementById("inputNroPuerta");
+
+
+
+
+// function checkValidInputs(){
+
+// let checked = false
+
+// STREET.value !== ''? (STREET.className = 'form-control is-valid') && (VALID_STREET.className ='valid-feedback') && (VALID_STREET.textContent = "Válido") : (STREET.className = 'form-control is-invalid') && (VALID_STREET.className ='invalid-feedback') && (VALID_STREET.textContent = "Ingrese una calle") && (checked = true);
+// CORNER.value !== ''? (CORNER.className = 'form-control is-valid') && (VALID_CORNER.className = 'valid-feedback') && (VALID_CORNER.textContent = "Válido") : (CORNER.className = 'form-control is-invalid') && (VALID_CORNER.className = 'invalid-feedback') && (VALID_CORNER.textContent = "Ingrese la esquina") && (checked = true);
+// NUMBER.value !== ''? (NUMBER.className = 'form-control is-valid') && (VALID_NUMBER.className = 'valid-feedback') && (VALID_NUMBER.textContent = "Válido") : (NUMBER.className = 'form-control is-invalid') && (VALID_NUMBER.className = 'invalid-feedback') && (VALID_NUMBER.textContent = "Ingrese numeración") && (checked = true);
+
+// checked ? alert("Debe completar todos los campos de envío") : alert("Ha comprado con éxito")
+
+// }
+
+
+
+
+// const BTN_FINALIZAR = document.getElementById("btn-finalizar");
+// const FORM = document.getElementById("form");
+
+
+
+// BTN_FINALIZAR.addEventListener('submit', function(){
+//     checkValidInputs()
+// })
+
+
+
+
+// form.addEventListener('submit', e => {
+//     e.preventDefault();
+//     checkValidInputs();
+// })

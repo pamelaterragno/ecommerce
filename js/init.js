@@ -46,5 +46,5 @@ document.getElementById("usermail").innerHTML+=localStorage.getItem("mail");
 
 LOG_OUT.addEventListener("click", function() {
   window.location = "login.html"
-  localStorage.clear();
+  localStorage.removeItem("mail");
 });

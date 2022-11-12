@@ -1,46 +1,73 @@
-const EMAIL_INPUT = document.getElementById("email");
+//INPUT
+const SCND_NAME = document.getElementById("second-name");
+const SCND_SURNAME = document.getElementById("second-surname");
+const PHONE_NUMBER = document.getElementById("phone-number");
+//INPUT (*)
 const NAME = document.getElementById("name");
 const SURNAME = document.getElementById("surname");
+const EMAIL = document.getElementById("email");
+//BTN
 const BTN_SAVE = document.getElementById("btn-save");
+//DIVS CLASS VALIDATION
+const VALID_NAME = document.getElementById("nameShowValidation");
+const VALID_SURNAME = document.getElementById("surnameShowValidation");
+const VALID_EMAIL = document.getElementById("emailShowValidation");
 
 
-
-
+//event listener DOMContent
 document.addEventListener("DOMContentLoaded", function (e) {
     showMail()
+    showValueInput()
     });  
 
 
 
+//funcion show mail in input 
 function showMail(){
-    EMAIL_INPUT.value = localStorage.getItem("mail")
+    EMAIL.value = localStorage.getItem("mail")
+}
+
+//function show values users in input
+function showValueInput(){
+  NAME.value = localStorage.getItem("name")
+  SURNAME.value = localStorage.getItem("surname")
+  SCND_NAME.value = localStorage.getItem("scnd-name")
+  SCND_SURNAME.value = localStorage.getItem("scnd-surname")
+  PHONE_NUMBER.value = localStorage.getItem("phone-number")
 }
 
 
 
-(function () {
-    'use strict'
-  
-    // Fetch all the forms we want to apply custom Bootstrap validation styles to
-    var forms = document.querySelectorAll('.needs-validation')
-  
-    // Loop over them and prevent submission
-    Array.prototype.slice.call(forms) 
-      .forEach(function (form) {
-        form.addEventListener('submit', function (event) {
-          //Ejecuta la funcion de las password
-          validarPassword2()  
-          //Feedback del checkbox
+//function to save in local storage if validation is ok
+function saveInLocalStorage(){
 
-          if (!form.checkValidity()) { //
-            event.preventDefault()
-            event.stopPropagation()
-          }
-  
-          form.classList.add('was-validated') //muestra todas las validaciones
-        }, false)
-      })
-  })()
+  localStorage.setItem("name", NAME.value);
+  localStorage.setItem("surname", SURNAME.value);
 
+  localStorage.setItem("scnd-name", SCND_NAME.value);
+  localStorage.setItem("scnd-surname", SCND_SURNAME.value);
+  localStorage.setItem("phone-number", PHONE_NUMBER.value);
+
+}
+
+//validation of (*) inputs
+function profileValidation(){
+ 
+  let checkTotal = false;
+ 
+  NAME.value != '' ? (VALID_NAME.className = 'valid-feedback') && (VALID_NAME.textContent = "Está correcto") && (NAME.className = 'form-control is-valid') : (VALID_NAME.className = 'invalid-feedback') && (VALID_NAME.textContent = "Ingresa su nombre") && (NAME.className = 'form-control is-invalid') && (checkTotal = true);
+  SURNAME.value != '' ? (VALID_SURNAME.className = 'valid-feedback') && (VALID_SURNAME.textContent = "Está correcto") && (SURNAME.className = 'form-control is-valid') : (VALID_SURNAME.className = 'invalid-feedback') && (VALID_SURNAME.textContent = "Ingrese su apellido") && (SURNAME.className = 'form-control is-invalid') && (checkTotal = true);
+  
+  checkTotal ? alert("Debe completar los campos obligatorios") : alert("Los datos se han guardado correctamente");
+
+}
+
+
+
+//event listener to validate inputs (*)
+BTN_SAVE.addEventListener("click", function(e){
+  profileValidation();
+  saveInLocalStorage();
+})
 
 
